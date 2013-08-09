@@ -18,10 +18,12 @@ header{
 }
 
 header h1{
+    color: white;
     font-weight: normal;
     font-size: 5em;
     margin: 20px 0px 10px 0px;
     line-height: 1em;
+    text-shadow: 1px 1px 2px @darkblue;
 }
 
 #menu{
@@ -35,6 +37,7 @@ header h1{
         -webkit-transition: 0.5s;
         -webkit-transform:scale(1);
         border-radius: 30%;
+        border: 2px solid @darkblue;
         padding: 10px;
         background-color: white;
         color: #2c3e50;
@@ -45,7 +48,6 @@ header h1{
         }
     }
     a:hover{
-        -webkit-transform:scale(1.1);
         background-color: white;
         color: @blue;
         // box-shadow: 0px 0px 15px -3px #000;
@@ -59,6 +61,15 @@ header h1{
         i.icon-heart{
             color:@red;
             -webkit-animation: heart-icon 1s infinite;
+        }
+        i.icon-pencil{
+            -webkit-animation: pencil-icon 2s infinite;
+        }
+        i.icon-code{
+            -webkit-transform: rotate(180deg);
+        }
+        i.icon-male{
+            -webkit-transform: rotateY(180deg);
         }
     }
 }
@@ -91,12 +102,25 @@ header h1{
   50% { -webkit-transform:rotate(0deg); }
 }
 
+@-webkit-keyframes pencil-icon {
+  0%   { -webkit-transform:translate(0px, 0px) rotate(0deg); }
+  10%  { -webkit-transform:translate(2px, 0px) rotate(5deg); }
+  20%  { -webkit-transform:translate(4px, 0px) rotate(-5deg); }
+  30%  { -webkit-transform:translate(6px, 0px) rotate(5deg); }
+  40%  { -webkit-transform:translate(8px, 0px) rotate(-5deg); }
+  50%  { -webkit-transform:translate(10px, 0px) rotate(5deg); }
+  60%  { -webkit-transform:translate(12px, 0px) rotate(-5deg); }
+  70%  { -webkit-transform:translate(14px, 0px) rotate(5deg); }
+}
+
 #content{
     margin-top: 10px;
     color:@darkblue;
 
     div.title{
         background-color: white;
+        border-top: 1px solid @darkblue;
+        border-bottom: 1px solid @darkblue;
     }
 
     div.card{
@@ -120,6 +144,10 @@ header h1{
         padding:0;
         font-size: 2em;
         text-align: center
+    }
+    a{
+        color: @blue;
+        font-weight: bold;
     }
 }
 

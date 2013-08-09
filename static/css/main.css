@@ -11,10 +11,12 @@ header {
   text-align: center;
 }
 header h1 {
+  color: white;
   font-weight: normal;
   font-size: 5em;
   margin: 20px 0px 10px 0px;
   line-height: 1em;
+  text-shadow: 1px 1px 2px #2c3e50;
 }
 #menu {
   text-align: center;
@@ -28,6 +30,7 @@ header h1 {
   -webkit-transition: 0.5s;
   -webkit-transform: scale(1);
   border-radius: 30%;
+  border: 2px solid #2c3e50;
   padding: 10px;
   background-color: white;
   color: #2c3e50;
@@ -38,7 +41,6 @@ header h1 {
   -webkit-transition: 1s;
 }
 #menu a:hover {
-  -webkit-transform: scale(1.1);
   background-color: white;
   color: #3498db;
 }
@@ -53,6 +55,15 @@ header h1 {
 #menu a:hover i.icon-heart {
   color: #e74c3c;
   -webkit-animation: heart-icon 1s infinite;
+}
+#menu a:hover i.icon-pencil {
+  -webkit-animation: pencil-icon 2s infinite;
+}
+#menu a:hover i.icon-code {
+  -webkit-transform: rotate(180deg);
+}
+#menu a:hover i.icon-male {
+  -webkit-transform: rotateY(180deg);
 }
 @-webkit-keyframes wrench-icon {
   0% {
@@ -117,12 +128,40 @@ header h1 {
     -webkit-transform: rotate(0deg);
   }
 }
+@-webkit-keyframes pencil-icon {
+  0% {
+    -webkit-transform: translate(0px, 0px) rotate(0deg);
+  }
+  10% {
+    -webkit-transform: translate(2px, 0px) rotate(5deg);
+  }
+  20% {
+    -webkit-transform: translate(4px, 0px) rotate(-5deg);
+  }
+  30% {
+    -webkit-transform: translate(6px, 0px) rotate(5deg);
+  }
+  40% {
+    -webkit-transform: translate(8px, 0px) rotate(-5deg);
+  }
+  50% {
+    -webkit-transform: translate(10px, 0px) rotate(5deg);
+  }
+  60% {
+    -webkit-transform: translate(12px, 0px) rotate(-5deg);
+  }
+  70% {
+    -webkit-transform: translate(14px, 0px) rotate(5deg);
+  }
+}
 #content {
   margin-top: 10px;
   color: #2c3e50;
 }
 #content div.title {
   background-color: white;
+  border-top: 1px solid #2c3e50;
+  border-bottom: 1px solid #2c3e50;
 }
 #content div.card {
   background-color: white;
@@ -145,6 +184,10 @@ header h1 {
   padding: 0;
   font-size: 2em;
   text-align: center;
+}
+#content a {
+  color: #3498db;
+  font-weight: bold;
 }
 #im_a {
   margin-top: 100px;
