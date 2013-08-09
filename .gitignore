@@ -1,3 +1,4 @@
 *.pyc
 VENV
 Freezer
+codekit-config.json
