@@ -1,0 +1,37 @@
+{% extends "index.html" %}
+            {% block title %}Hobbies{% endblock %}
+            {% block content %}
+            <div class="title">
+                <h2>I <i class="icon-heart"></i> A Lot of Things</h2>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="one-third column">
+                        <div class="card">
+                            <p><h3>I Take Photos</h3></p>
+                        </div>
+                        <div class="card">
+                            <p>I am no professional, but I do quite enjoy taking photos with my trusty <b>Nikon D7000</b></p>
+                            <p>I particularly enjoy taking photos while travelling around the world.</p>
+                        </div>
+                    </div>
+                    <div class="two-thirds column card">
+                        <p><img width="100%" src="{{ url_for('static', filename='img/flying.jpg') }}"</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="two-thirds column card">
+                        <p><iframe src="http://player.vimeo.com/video/51888021?color=44bbff&amp;api=1" width="100%" height="350" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></p>
+                    </div>
+                    <div class="one-third column">
+                        <div class="card">
+                            <p><h3>I Shoot Videos</h3></p>
+                        </div>
+                        <div class="card">
+                            <p>I am no professional, but I do quite enjoy taking photos with my trusty <b>Nikon D7000</b></p>
+                            <p>I particularly enjoy taking photos while travelling around the world.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endblock %}
