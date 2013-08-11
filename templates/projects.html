@@ -1,0 +1,213 @@
+{% extends "index.html" %}
+            {% block title %}Projects{% endblock %}
+            {% block content %}
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    var ctx = document.getElementById("myChart").getContext("2d");    
+                    var data = {
+                        labels : ["C++","Java","Python","PHP","Javascript","HTML","CSS"],
+                        datasets : [
+                            {
+                                fillColor : "rgba(52, 152, 219,0.7)",
+                                strokeColor : "rgba(44, 62, 80,1.0)",
+                                pointColor : "rgba(41, 128, 185,1.0)",
+                                pointStrokeColor : "rgba(44, 62, 80,1.0)",
+                                data : [90,70,80,80,85,100,100]
+                            }
+                        ]
+                    }
+                    var options = {
+                
+                        //Boolean - If we show the scale above the chart data           
+                        scaleOverlay : false,
+                        
+                        //Boolean - If we want to override with a hard coded scale
+                        scaleOverride : true,
+                        
+                        //** Required if scaleOverride is true **
+                        //Number - The number of steps in a hard coded scale
+                        scaleSteps : 10,
+                        //Number - The value jump in the hard coded scale
+                        scaleStepWidth : 10,
+                        //Number - The centre starting value
+                        scaleStartValue : 0,
+                        
+                        //Boolean - Whether to show lines for each scale point
+                        scaleShowLine : true,
+
+                        //String - Colour of the scale line 
+                        scaleLineColor : "rgba(0,0,0,.1)",
+                        
+                        //Number - Pixel width of the scale line    
+                        scaleLineWidth : 2,
+
+                        //Boolean - Whether to show labels on the scale 
+                        scaleShowLabels : false,
+                        
+                        //Interpolated JS string - can access value
+                        scaleLabel : "<%=value%>",
+                        
+                        //String - Scale label font declaration for the scale label
+                        scaleFontFamily : "'Arial'",
+                        
+                        //Number - Scale label font size in pixels  
+                        scaleFontSize : 16,
+                        
+                        //String - Scale label font weight style    
+                        scaleFontStyle : "normal",
+                        
+                        //String - Scale label font colour  
+                        scaleFontColor : "#666",
+                        
+                        //Boolean - Show a backdrop to the scale label
+                        scaleShowLabelBackdrop : true,
+                        
+                        //String - The colour of the label backdrop 
+                        scaleBackdropColor : "rgba(255,255,255,0.75)",
+                        
+                        //Number - The backdrop padding above & below the label in pixels
+                        scaleBackdropPaddingY : 2,
+                        
+                        //Number - The backdrop padding to the side of the label in pixels  
+                        scaleBackdropPaddingX : 2,
+                        
+                        //Boolean - Whether we show the angle lines out of the radar
+                        angleShowLineOut : true,
+                        
+                        //String - Colour of the angle line
+                        angleLineColor : "rgba(0,0,0,.1)",
+                        
+                        //Number - Pixel width of the angle line
+                        angleLineWidth : 1,         
+                        
+                        //String - Point label font declaration
+                        pointLabelFontFamily : "'Arial'",
+                        
+                        //String - Point label font weight
+                        pointLabelFontStyle : "normal",
+                        
+                        //Number - Point label font size in pixels  
+                        pointLabelFontSize : 14,
+                        
+                        //String - Point label font colour  
+                        pointLabelFontColor : "#666",
+                        
+                        //Boolean - Whether to show a dot for each point
+                        pointDot : true,
+                        
+                        //Number - Radius of each point dot in pixels
+                        pointDotRadius : 3,
+                        
+                        //Number - Pixel width of point dot stroke
+                        pointDotStrokeWidth : 1,
+                        
+                        //Boolean - Whether to show a stroke for datasets
+                        datasetStroke : true,
+                        
+                        //Number - Pixel width of dataset stroke
+                        datasetStrokeWidth : 2,
+                        
+                        //Boolean - Whether to fill the dataset with a colour
+                        datasetFill : true,
+                        
+                        //Boolean - Whether to animate the chart
+                        animation : true,
+
+                        //Number - Number of animation steps
+                        animationSteps : 60*4,
+                        
+                        //String - Animation easing effect
+                        animationEasing : "easeOutQuart",
+
+                        //Function - Fires when the animation is complete
+                        onAnimationComplete : null
+                        
+                    }
+                    var myNewChart = new Chart(ctx).Radar(data,options);
+                });
+            </script>
+            <div class="title">
+                <h2>I work on Software Projects</h2>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="one-third column">
+                        <div class="card">
+                            <p><h3>I Enjoy Programming</h3></p>
+                        </div>
+                        <div class="card">
+                            <p>I am not just a 9-to-5 programmer, I do it for fun too!</p>
+                            
+                        </div>
+                    </div>
+                    <div class="one-third column card">
+                        <p>
+                            <canvas id="myChart" width="300" height="300"></canvas>
+                        </p>
+                    </div>
+                    <div class="one-third column card">
+                        <p>Many computer engineers limit their programming to school assignments, but my past projects/experiments extend well beyond the boundary of the classroom. Check them out below!</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-third column">
+                        <div class="card">
+                            <p><h3>You're Next</h3></p>
+                        </div>
+                        <div class="card">
+                            <p>The University of Toronto's largest student-run career organisation.</p>
+                            <p>The website was developed using Flask and SQLAlchemy, and features many cutting-edge HTML5 and CSS3 techniques. Stripe's credit card processing API is used to handle package purchases, and a login-only dashboard is available for purchasing companies</p>
+                            <p>Check it out online at <a href="http://www.yourenext.ca" target="_blank">http://www.yourenext.ca</a></p>
+                        </div>
+                    </div>
+                    <div class="two-thirds column card">
+                        <p>
+                            <img src="{{ url_for('static', filename='img/yncn.png') }}" alt="" width="100%">
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-third column">
+                        <div class="card">
+                            <p><h3>PacMan AI</h3></p>
+                        </div>
+                        <div class="card">
+                            <p>Written as part of the Orbis Challenge programming contest, a classmate and I designed an AI for Mr. PacMan.</p>
+                            <p>The video on the right shows the AI in action. When tested in repeat trials, the average score that this AI will obtain is ~9000.</p>
+                            <p><a href="https://github.com/jamesharding/PacManAI" target="_blank">Check it out on GitHub!</a></p>
+                        </div>
+                    </div>
+                    <div class="two-thirds column card">
+                        <p>
+                            <iframe class="feature" src="http://player.vimeo.com/video/50949720?portrait=0&amp;autoplay=1" width="100%" height="350" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" kwframeid="3"></iframe>
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-third column">
+                        <div class="card">
+                            <p><h3>Database Server</h3></p>
+                        </div>
+                        <div class="card">
+                            <p>The goal of this projects was to write a database server from scratch in the C language. Many aspects of programming were introduced including sockets, threading, parsing, and team project management.</p>
+                            <p>We opted to use industry-standard protocols (JSON) and hash tables in the storage system to provide constant-time lookup.</p>
+                            <p>Check out our final presentation in <a href="http://labs.jamesharding.ca/presentations/StorageServer/assets/player/KeynoteDHTMLPlayer.html" target="_blank">Chrome/Safari</a> or <a href="http://labs.jamesharding.ca/presentations/StorageServer//assets/fallback/index.html" target="_blank">Other Browsers</a>.</p>
+                        </div>
+                    </div>
+                    <div class="two-thirds column card">
+                        <p>
+                            <img src="{{ url_for('static', filename='img/database.jpg') }}" alt="" width="100%">
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="one-third column card">
+                        <p><h3>And Many More</h3></p>
+                    </div>
+                    <div class="two-thirds column card">
+                        <p>This is just the beginning.</p>
+                        <p>If you are interested in seeing more of my work, contact me!</p>
+                    </div>
+                </div>
+            </div>
+            {% endblock %}

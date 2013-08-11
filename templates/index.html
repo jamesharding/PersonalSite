@@ -17,13 +17,21 @@
         <link rel="stylesheet" href="static/css/grid.css">
         <link rel="stylesheet" href="static/css/main.css">
 
-
+        <script src="static/js/prefixfree.min.js"></script>
         <script src="static/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script src="static/js/dynamo.js"></script>
+        <script src="static/js/Chart.min.js"></script>
         <script src="static/js/main.js"></script>
     </head>
     <body>
+        <div id="social">
+            <a href="https://github.com/jamesharding" target="_blank"><i class="icon-github"></i></a>
+            <a href="https://twitter.com/james_harding" target="_blank"><i class="icon-twitter"></i></a>
+            <a href="http://ca.linkedin.com/in/jamesdavidharding" target="_blank"><i class="icon-linkedin"></i></a>
+            <a href="https://www.facebook.com/jamesharding" target="_blank"><i class="icon-facebook"></i></a>
+            <a href="https://plus.google.com/104295715538786922883" target="_blank"><i class="icon-google-plus"></i></a>
+        </div>
         <header>
             <div class="container">
                 <h1>James Harding</h1>
@@ -34,9 +42,9 @@
             <div class="container">
                 <a href="{{ url_for('home') }}" class="menu-icon"><i class="icon-male"></i></a>
                 <a href="{{ url_for('pilot') }}" class="menu-icon"><i class="icon-plane"></i></a>
-                <a href="#" class="menu-icon"><i class="icon-wrench"></i></a>
+                <a href="{{ url_for('engineer') }}" class="menu-icon"><i class="icon-wrench"></i></a>
                 <a href="{{ url_for('hobbies') }}" class="menu-icon"><i class="icon-heart"></i></a>
-                <a href="#" class="menu-icon"><i class="icon-code"></i></a>
+                <a href="{{ url_for('projects') }}" class="menu-icon"><i class="icon-code"></i></a>
                 <a href="#" class="menu-icon"><i class="icon-pencil"></i></a>
             </div>
         </div>

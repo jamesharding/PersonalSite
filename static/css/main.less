@@ -5,7 +5,7 @@
 body{
     background-color: @blue;
     color: #ecf0f1;
-    font-family: 'Roboto';
+    font-family: 'Montserrat','Helvetica', sans-serif;
 }
 
 a{
@@ -24,6 +24,25 @@ header h1{
     margin: 20px 0px 10px 0px;
     line-height: 1em;
     text-shadow: 1px 1px 2px @darkblue;
+}
+
+#social{
+    position: absolute;
+    top:0px;
+    right: 0px;
+    background: @darkblue;
+    border-radius: 0px 0px 0px 5px;
+    font-size: 1.5em;
+    padding: 5px;
+    a{
+        margin-left: 3px;
+        margin-right: 3px;
+        -webkit-transition: 0.5s;
+        text-shadow: 1px 1px 2px darken(@blue, 20%);
+    }
+    a:hover{
+        color:@blue;
+    }
 }
 
 #menu{
@@ -103,7 +122,7 @@ header h1{
 }
 
 @-webkit-keyframes pencil-icon {
-  0%   { -webkit-transform:translate(0px, 0px) rotate(0deg); }
+  0%   { -webkit-transform:translate(0px, 0px) rotate(-5deg); }
   10%  { -webkit-transform:translate(2px, 0px) rotate(5deg); }
   20%  { -webkit-transform:translate(4px, 0px) rotate(-5deg); }
   30%  { -webkit-transform:translate(6px, 0px) rotate(5deg); }
@@ -113,31 +132,59 @@ header h1{
   70%  { -webkit-transform:translate(14px, 0px) rotate(5deg); }
 }
 
+.notransition {
+    -webkit-transition: none !important;
+    -moz-transition: none !important;
+    -o-transition: none !important;
+    -ms-transition: none !important;
+    transition: none !important;
+}
+
+#content.left{
+    left:-100%;
+}
+#content.right{
+    left:100%;
+}
+
 #content{
     margin-top: 10px;
     color:@darkblue;
+    position: relative;
+    transition: left .5s ease;
 
     div.title{
-        background-color: white;
-        border-top: 1px solid @darkblue;
-        border-bottom: 1px solid @darkblue;
+        background-color: @darkblue;
+        color:white;
+        padding-bottom: 3px;
+        text-shadow: 1px 1px 2px lighten(@darkblue, 20%);
+        // border-top: 1px solid @darkblue;
+        // border-bottom: 5px solid @darkblue;
     }
 
     div.card{
         background-color: white;
         margin-top: 20px;
+        border-radius: 5px;
         p{
             padding: 10px;
             margin: 0px;
             font-size: 1.0em;
         }
-        border-radius: 5px;
+        pre.terminal{
+            padding: 10px;
+            margin: 10px;
+            background-color: black;
+            color: green;
+            font-family: 'Courier';
+        }
     }
     h2{
         margin:0;
         padding:0;
         font-size: 3em;
-        text-align: center
+        text-align: center;
+        font-weight: normal;
     }
     h3{
         margin:0;
@@ -149,6 +196,12 @@ header h1{
         color: @blue;
         font-weight: bold;
     }
+}
+
+canvas{
+    width: 100% !important;
+    max-width: 800px;
+    height: auto !important;
 }
 
 #im_a{

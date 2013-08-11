@@ -1,7 +1,7 @@
 body {
   background-color: #3498db;
   color: #ecf0f1;
-  font-family: 'Roboto';
+  font-family: 'Montserrat', 'Helvetica', sans-serif;
 }
 a {
   text-decoration: none;
@@ -17,6 +17,24 @@ header h1 {
   margin: 20px 0px 10px 0px;
   line-height: 1em;
   text-shadow: 1px 1px 2px #2c3e50;
+}
+#social {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  background: #2c3e50;
+  border-radius: 0px 0px 0px 5px;
+  font-size: 1.5em;
+  padding: 5px;
+}
+#social a {
+  margin-left: 3px;
+  margin-right: 3px;
+  -webkit-transition: 0.5s;
+  text-shadow: 1px 1px 2px #196090;
+}
+#social a:hover {
+  color: #3498db;
 }
 #menu {
   text-align: center;
@@ -130,7 +148,7 @@ header h1 {
 }
 @-webkit-keyframes pencil-icon {
   0% {
-    -webkit-transform: translate(0px, 0px) rotate(0deg);
+    -webkit-transform: translate(0px, 0px) rotate(-5deg);
   }
   10% {
     -webkit-transform: translate(2px, 0px) rotate(5deg);
@@ -154,14 +172,30 @@ header h1 {
     -webkit-transform: translate(14px, 0px) rotate(5deg);
   }
 }
+.notransition {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  -ms-transition: none !important;
+  transition: none !important;
+}
+#content.left {
+  left: -100%;
+}
+#content.right {
+  left: 100%;
+}
 #content {
   margin-top: 10px;
   color: #2c3e50;
+  position: relative;
+  transition: left .5s ease;
 }
 #content div.title {
-  background-color: white;
-  border-top: 1px solid #2c3e50;
-  border-bottom: 1px solid #2c3e50;
+  background-color: #2c3e50;
+  color: white;
+  padding-bottom: 3px;
+  text-shadow: 1px 1px 2px #507192;
 }
 #content div.card {
   background-color: white;
@@ -173,11 +207,19 @@ header h1 {
   margin: 0px;
   font-size: 1.0em;
 }
+#content div.card pre.terminal {
+  padding: 10px;
+  margin: 10px;
+  background-color: black;
+  color: green;
+  font-family: 'Courier';
+}
 #content h2 {
   margin: 0;
   padding: 0;
   font-size: 3em;
   text-align: center;
+  font-weight: normal;
 }
 #content h3 {
   margin: 0;
@@ -188,6 +230,11 @@ header h1 {
 #content a {
   color: #3498db;
   font-weight: bold;
+}
+canvas {
+  width: 100% !important;
+  max-width: 800px;
+  height: auto !important;
 }
 #im_a {
   margin-top: 100px;
