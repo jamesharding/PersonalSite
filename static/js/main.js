@@ -1,8 +1,4 @@
 $(document).ready(function(){
-	$('.dynamo').dynamo();
-});
-
-$(document).ready(function(){
 	$('#loader').hide(0);
 	$('body').on('click', '#menu a', function() {
 		history.pushState({ path: this.path }, '', this.href);
@@ -24,6 +20,7 @@ $(document).ready(function(){
 			// _gaq.push(['_trackPageview']);
 
 			setTimeout(function(){
+				// Replace content
 				$('#content').html( $data.filter('#content')[0].children );
 				$('#content').addClass('notransition');
 				$('#content').addClass('right');
@@ -33,7 +30,7 @@ $(document).ready(function(){
 					$('#loader').fadeOut(500);
 					$('#content').removeClass('notransition');
 					$('#content').removeClass('right');
-				}, 550);
+				}, 250);
 			}, 550);
 
 				

@@ -6,8 +6,8 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>James Harding - {% block title %}{% endblock %}</title>
-        <meta name="description" content="James Harding NEEDS TO ADD A DESCRIPTION">
+        <title>{% block title %}Page Not Found{% endblock %} - James Harding</title>
+        <meta name="description" content="James Harding: Pilot, Engineer, and Web Developer.">
         <meta name="viewport" content="width=device-width">
         
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,100' rel='stylesheet' type='text/css'>
@@ -26,11 +26,11 @@
     </head>
     <body>
         <div id="social">
-            <a href="https://github.com/jamesharding" target="_blank"><i class="icon-github"></i></a>
-            <a href="https://twitter.com/james_harding" target="_blank"><i class="icon-twitter"></i></a>
-            <a href="http://ca.linkedin.com/in/jamesdavidharding" target="_blank"><i class="icon-linkedin"></i></a>
-            <a href="https://www.facebook.com/jamesharding" target="_blank"><i class="icon-facebook"></i></a>
-            <a href="https://plus.google.com/104295715538786922883" target="_blank"><i class="icon-google-plus"></i></a>
+            <a href="https://github.com/jamesharding" target="_blank" title="Github"><i class="icon-github"></i></a>
+            <a href="https://twitter.com/james_harding" target="_blank" title="Twitter"><i class="icon-twitter"></i></a>
+            <a href="http://ca.linkedin.com/in/jamesdavidharding" target="_blank" title="LinkedIn"><i class="icon-linkedin"></i></a>
+            <a href="https://www.facebook.com/jamesharding" target="_blank" title="Facebook"><i class="icon-facebook"></i></a>
+            <a href="https://plus.google.com/104295715538786922883" target="_blank" title="Google+"><i class="icon-google-plus"></i></a>
         </div>
         <header>
             <div class="container">
@@ -40,12 +40,12 @@
 
         <div id="menu">
             <div class="container">
-                <a href="{{ url_for('home') }}" class="menu-icon"><i class="icon-male"></i></a>
-                <a href="{{ url_for('pilot') }}" class="menu-icon"><i class="icon-plane"></i></a>
-                <a href="{{ url_for('engineer') }}" class="menu-icon"><i class="icon-wrench"></i></a>
-                <a href="{{ url_for('hobbies') }}" class="menu-icon"><i class="icon-heart"></i></a>
-                <a href="{{ url_for('projects') }}" class="menu-icon"><i class="icon-code"></i></a>
-                <a href="#" class="menu-icon"><i class="icon-pencil"></i></a>
+                <a href="{{ url_for('home') }}" class="menu-icon" title="About Me"><i class="icon-male"></i></a>
+                <a href="{{ url_for('pilot') }}" class="menu-icon" title="Aviation"><i class="icon-plane"></i></a>
+                <a href="{{ url_for('engineer') }}" class="menu-icon" title="Engineer"><i class="icon-wrench"></i></a>
+                <a href="{{ url_for('hobbies') }}" class="menu-icon" title="Hobbies"><i class="icon-heart"></i></a>
+                <a href="{{ url_for('projects') }}" class="menu-icon" title="Projects"><i class="icon-code"></i></a>
+                <a href="{{ url_for('posts') }}" class="menu-icon" title="Posts"><i class="icon-pencil"></i></a>
             </div>
         </div>
 
@@ -56,7 +56,11 @@
         </div>
         
         <div id="content">
-            {% block content %}Page not found!{% endblock %}
+            {% block content %}
+            <div class="title">
+                <h2>Page Not Found!</h2>
+            </div>
+            {% endblock %}
         </div>
     </body>
 </html>

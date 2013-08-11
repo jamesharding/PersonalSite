@@ -1,7 +1,11 @@
+html {
+  overflow-x: hidden;
+}
 body {
   background-color: #3498db;
   color: #ecf0f1;
   font-family: 'Montserrat', 'Helvetica', sans-serif;
+  overflow-x: hidden;
 }
 a {
   text-decoration: none;
@@ -187,7 +191,7 @@ header h1 {
   margin-top: 10px;
   color: #2c3e50;
   position: relative;
-  transition: left .5s ease;
+  transition: left .5s;
 }
 #content div.title {
   background-color: #2c3e50;
