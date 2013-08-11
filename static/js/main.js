@@ -5,7 +5,7 @@ $(document).ready(function(){
 		var th = this;
 
 		$('#content').addClass('left');
-		$('#loader').fadeIn(500);
+		$('#loader').fadeIn(100);
 
 		$.get(th.href, function(data) {
 			var $data = $(data);
@@ -27,7 +27,7 @@ $(document).ready(function(){
 				$('#content').removeClass('left');
 
 				setTimeout(function(){
-					$('#loader').fadeOut(500);
+					$('#loader').fadeOut(100);
 					$('#content').removeClass('notransition');
 					$('#content').removeClass('right');
 				}, 250);
