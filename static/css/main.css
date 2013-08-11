@@ -24,6 +24,7 @@ header h1 {
 }
 #social {
   position: absolute;
+  z-index: 1000;
   top: 0px;
   right: 0px;
   background: #2c3e50;
