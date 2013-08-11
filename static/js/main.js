@@ -14,10 +14,10 @@ $(document).ready(function(){
 			document.title = $data.filter('title').text();
 			
 			// Track on Piwik
-			// _paq.push(['setCustomUrl', window.location]);
-			// _paq.push(['setDocumentTitle', document.title]);
-			// _paq.push(['trackPageView']);
-			// _gaq.push(['_trackPageview']);
+			_paq.push(['setCustomUrl', window.location]);
+			_paq.push(['setDocumentTitle', document.title]);
+			_paq.push(['trackPageView']);
+			_gaq.push(['_trackPageview']);
 
 			setTimeout(function(){
 				// Replace content
