@@ -2,12 +2,14 @@ $(document).ready(function(){
 	$('.dynamo').dynamo();
 });
 
-$(function(){
+$(document).ready(function(){
+	$('#loader').hide(0);
 	$('body').on('click', '#menu a', function() {
 		history.pushState({ path: this.path }, '', this.href);
 		var th = this;
 
 		$('#content').addClass('left');
+		$('#loader').fadeIn(500);
 
 		$.get(th.href, function(data) {
 			var $data = $(data);
@@ -28,6 +30,7 @@ $(function(){
 				$('#content').removeClass('left');
 
 				setTimeout(function(){
+					$('#loader').fadeOut(500);
 					$('#content').removeClass('notransition');
 					$('#content').removeClass('right');
 				}, 550);

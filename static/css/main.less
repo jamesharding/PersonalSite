@@ -37,7 +37,7 @@ header h1{
     a{
         margin-left: 3px;
         margin-right: 3px;
-        -webkit-transition: 0.5s;
+        transition: 0.5s;
         text-shadow: 1px 1px 2px darken(@blue, 20%);
     }
     a:hover{
@@ -53,8 +53,8 @@ header h1{
         width:30px;
         height:30px;
         margin: 5px;
-        -webkit-transition: 0.5s;
-        -webkit-transform:scale(1);
+        transition: 0.5s;
+        transform:scale(1);
         border-radius: 30%;
         border: 2px solid @darkblue;
         padding: 10px;
@@ -63,7 +63,7 @@ header h1{
         overflow: hidden;
         i{
             display: block;
-            -webkit-transition: 1s;
+            transition: 1s;
         }
     }
     a:hover{
@@ -71,79 +71,77 @@ header h1{
         color: @blue;
         // box-shadow: 0px 0px 15px -3px #000;
         i.icon-wrench{
-            -webkit-transform-origin: 25px 12px;
-            -webkit-animation: wrench-icon 2s infinite;
+            transform-origin: 25px 12px;
+            animation: wrench-icon 2s infinite;
         }i.icon-plane{
-            -webkit-animation: airplane-icon 3s infinite;
+            animation: airplane-icon 3s infinite;
             color: @darkblue
         }
         i.icon-heart{
             color:@red;
-            -webkit-animation: heart-icon 1s infinite;
+            animation: heart-icon 1s infinite;
         }
         i.icon-pencil{
-            -webkit-animation: pencil-icon 2s infinite;
+            animation: pencil-icon 2s infinite;
         }
         i.icon-code{
-            -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
         }
         i.icon-male{
-            -webkit-transform: rotateY(180deg);
+            transform: rotateY(180deg);
         }
     }
 }
 
-@-webkit-keyframes wrench-icon {
-  0%   { -webkit-transform:rotate(0deg); }
-  20%   { -webkit-transform:rotate(30deg); }
-  40%   { -webkit-transform:rotate(0deg); }
-  60%   { -webkit-transform:rotate(30deg); }
-  80%   { -webkit-transform:rotate(0deg); }
+@keyframes wrench-icon {
+  0%   { transform:rotate(0deg); }
+  20%   { transform:rotate(30deg); }
+  40%   { transform:rotate(0deg); }
+  60%   { transform:rotate(30deg); }
+  80%   { transform:rotate(0deg); }
 }
 
-@-webkit-keyframes heart-icon {
-  0%   { -webkit-transform:scale(1); }
-  10%   { -webkit-transform:scale(1.1); }
-  20%   { -webkit-transform:scale(1); }
-  30%   { -webkit-transform:scale(1.1); }
-  40%   { -webkit-transform:scale(1); }
+@keyframes heart-icon {
+  0%   { transform:scale(1); }
+  10%   { transform:scale(1.1); }
+  20%   { transform:scale(1); }
+  30%   { transform:scale(1.1); }
+  40%   { transform:scale(1); }
 }
 
-@-webkit-keyframes airplane-icon {
-  0%   { -webkit-transform:translate(0px, 0px) rotate(0deg); }
-  10%   { -webkit-transform:rotate(-45deg); }
-  23% { -webkit-transform:translate(0px, -40px) rotate(-45deg); }
-  24% { -webkit-transform:translate(100px, -40px) rotate(-45deg); }
-  25% { -webkit-transform:translate(100px, 0px) rotate(-45deg); }
-  26% { -webkit-transform:translate(100px, 40px) rotate(-45deg); }
-  27% { -webkit-transform:translate(0px, 40px) rotate(-45deg); }
-  40%   { -webkit-transform:translate(0px, 0px) rotate(-45deg); }
-  50% { -webkit-transform:rotate(0deg); }
+@keyframes airplane-icon {
+  0%   { transform:translate(0px, 0px) rotate(0deg); }
+  10%   { transform:rotate(-45deg); }
+  23% { transform:translate(0px, -40px) rotate(-45deg); }
+  24% { transform:translate(100px, -40px) rotate(-45deg); }
+  25% { transform:translate(100px, 0px) rotate(-45deg); }
+  26% { transform:translate(100px, 40px) rotate(-45deg); }
+  27% { transform:translate(0px, 40px) rotate(-45deg); }
+  40%   { transform:translate(0px, 0px) rotate(-45deg); }
+  50% { transform:rotate(0deg); }
 }
 
-@-webkit-keyframes pencil-icon {
-  0%   { -webkit-transform:translate(0px, 0px) rotate(-5deg); }
-  10%  { -webkit-transform:translate(2px, 0px) rotate(5deg); }
-  20%  { -webkit-transform:translate(4px, 0px) rotate(-5deg); }
-  30%  { -webkit-transform:translate(6px, 0px) rotate(5deg); }
-  40%  { -webkit-transform:translate(8px, 0px) rotate(-5deg); }
-  50%  { -webkit-transform:translate(10px, 0px) rotate(5deg); }
-  60%  { -webkit-transform:translate(12px, 0px) rotate(-5deg); }
-  70%  { -webkit-transform:translate(14px, 0px) rotate(5deg); }
+@keyframes pencil-icon {
+  0%   { transform:translate(0px, 0px) rotate(-5deg); }
+  10%  { transform:translate(2px, 0px) rotate(5deg); }
+  20%  { transform:translate(4px, 0px) rotate(-5deg); }
+  30%  { transform:translate(6px, 0px) rotate(5deg); }
+  40%  { transform:translate(8px, 0px) rotate(-5deg); }
+  50%  { transform:translate(10px, 0px) rotate(5deg); }
+  60%  { transform:translate(12px, 0px) rotate(-5deg); }
+  70%  { transform:translate(14px, 0px) rotate(5deg); }
 }
 
 .notransition {
-    -webkit-transition: none !important;
-    -moz-transition: none !important;
-    -o-transition: none !important;
-    -ms-transition: none !important;
     transition: none !important;
 }
 
-#content.left{
+.left{
+    position: relative;
     left:-100%;
 }
-#content.right{
+.right{
+    position: relative;
     left:100%;
 }
 
@@ -227,4 +225,59 @@ canvas{
         top: -10px;
         padding-bottom: 5px;
     }  
+}
+
+
+// LOADER
+
+#loader{
+    text-align: center;
+    transition: left .5s ease;
+    height: 0px;
+}
+
+.center-loader {
+    display: inline-block;
+    position: relative;
+    left: -50px;
+}
+
+.loader-xbox, .loader-xbox:before, .loader-xbox:after {
+  position: absolute;
+  border: 3px solid transparent;
+  border-top: 3px solid white;
+  border-radius: 50%;
+  animation: rotate linear infinite;
+  content: '';
+}
+
+.loader-xbox {
+  height: 100px;
+  width: 100px;
+  animation-duration: 1.05s;
+}
+
+.loader-xbox:before {
+  height: 75px;
+  width: 75px;
+  top: 10px;
+  left: 10px;
+  animation-duration: 10s;
+}
+
+.loader-xbox:after {
+  height: 50px;
+  width: 50px;
+  top: 22px;
+  left: 22px;
+  animation-duration: 4s;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateZ(360deg);
+  }
+  to {
+    transform: rotateZ(0deg);
+  }
 }

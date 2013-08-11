@@ -22,6 +22,10 @@ def hobbies():
 def projects():
 	return render_template('projects.html')
 
+@app.route("/posts")
+def posts():
+	return render_template('posts.html')
+
 @app.errorhandler(404)
 def page_not_found(e):
     return render_template('index.html'), 404
