@@ -10,9 +10,9 @@ def home():
 def engineer():
 	return render_template('engineer.html')
 
-@app.route("/pilot")
-def pilot():
-	return render_template('pilot.html')
+@app.route("/aviation")
+def aviation():
+	return render_template('aviation.html')
 
 @app.route("/hobbies")
 def hobbies():
