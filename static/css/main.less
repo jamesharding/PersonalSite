@@ -8,7 +8,8 @@ html{
 body{
     background-color: @blue;
     color: #ecf0f1;
-    font-family: 'Montserrat','Helvetica', sans-serif;
+    font-family: 'Raleway','Montserrat','Helvetica', sans-serif;
+    font-size: 18px;
     overflow-x: hidden;
 }
 
@@ -92,6 +93,10 @@ header h1{
         i.icon-code{
             transform: rotate(180deg);
         }
+        i.icon-briefcase{
+            transform-origin: 16px 4px;
+            animation: briefcase-icon 7s infinite;
+        }
         i.icon-male{
             transform: rotateY(180deg);
         }
@@ -137,6 +142,15 @@ header h1{
   70%  { transform:translate(14px, 0px) rotate(5deg); }
 }
 
+@keyframes briefcase-icon {
+  10%   { transform:rotate(15deg); }
+  20%   { transform:rotate(-15deg); }
+  30%   { transform:rotate(15deg); }
+  40%   { transform:rotate(-15deg); }
+  50%   { transform:rotate(15deg); }
+  60%   { transform:rotate(-15deg); }
+}
+
 .notransition {
     transition: none !important;
 }
@@ -154,15 +168,14 @@ header h1{
     margin-top: 10px;
     color:@darkblue;
     position: relative;
-    transition: left .5s;
+    transition: left 0.5s;
 
     div.title{
         background-color: @darkblue;
         color:white;
-        padding-bottom: 3px;
+        padding-bottom: 5px;
         text-shadow: 1px 1px 2px lighten(@darkblue, 20%);
-        // border-top: 1px solid @darkblue;
-        // border-bottom: 5px solid @darkblue;
+        font-size: 0.9em;
     }
 
     div.card{

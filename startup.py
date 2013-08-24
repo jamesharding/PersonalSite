@@ -22,6 +22,10 @@ def hobbies():
 def projects():
 	return render_template('projects.html')
 
+@app.route("/work-experience")
+def workexperience():
+	return render_template('workexperience.html')
+
 @app.route("/posts")
 def posts():
 	return render_template('posts.html')

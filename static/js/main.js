@@ -5,7 +5,7 @@ $(document).ready(function(){
 		var th = this;
 
 		$('#content').addClass('left');
-		$('#loader').fadeIn(100);
+		$('#loader').fadeIn(500);
 
 		$.get(th.href, function(data) {
 			var $data = $(data);
@@ -27,10 +27,10 @@ $(document).ready(function(){
 				$('#content').removeClass('left');
 
 				setTimeout(function(){
-					$('#loader').fadeOut(100);
+					$('#loader').fadeOut(500);
 					$('#content').removeClass('notransition');
 					$('#content').removeClass('right');
-				}, 250);
+				}, 500);
 			}, 550);
 
 				
