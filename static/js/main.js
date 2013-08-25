@@ -1,6 +1,6 @@
 $(document).ready(function(){
 	$('#loader').hide(0);
-	$('body').on('click', '#menu a', function() {
+	$('body').on('click', 'a.internal, #menu a', function() {
 		history.pushState({ path: this.path }, '', this.href);
 		var th = this;
 

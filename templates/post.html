@@ -1,0 +1,26 @@
+{% extends "index.html" %}
+            {% block title %}{{ post.title }}{% endblock %}
+            {% block content %}
+            <div class="title">
+                <div class="container">
+                    <span><a href="{{ url_for('posts') }}" class="internal"><i style="float:left; margin-top:15px; color:white; font-size: 35px;" class="icon-list"></i></a></span>
+                    <h2>
+                        {{ post.title }}
+                    </h2>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div id="post" class="sixteen column card">
+                        {{ post.html|safe }}
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    Prism.highlightAll(true, function(){
+                        
+                    });
+                });
+            </script>
+            {% endblock %}
