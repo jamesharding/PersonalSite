@@ -1,8 +1,13 @@
 $(document).ready(function(){
+	$('#menu a[href="'+window.location.pathname+'"]').addClass('active');
+	
 	$('#loader').hide(0);
 	$('body').on('click', 'a.internal, #menu a', function() {
 		history.pushState({ path: this.path }, '', this.href);
 		var th = this;
+
+		$('a.active').removeClass('active');
+		$('#menu a[href="'+window.location.pathname+'"]').addClass('active');
 
 		$('#content').addClass('left');
 		$('#loader').fadeIn(500);

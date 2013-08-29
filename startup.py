@@ -2,7 +2,7 @@ import sys
 from flask import Flask
 from flask import render_template
 
-from flask_flatpages import FlatPages
+from flask_flatpages import FlatPages, pygments_style_defs
 from flask_frozen import Freezer
 
 DEBUG = True
@@ -16,6 +16,10 @@ flatpages = FlatPages(app)
 freezer = Freezer(app)
 
 app.config.from_object(__name__)
+
+@app.route('/pygments.css')
+def pygments_css():
+    return pygments_style_defs('monokai'), 200, {'Content-Type': 'text/css'}
 
 @app.route("/")
 def home():
@@ -44,12 +48,11 @@ def workexperience():
 @app.route("/posts/")
 def posts():
 	posts = [p for p in flatpages if p.path.startswith(POST_DIR)]
-	print posts
+	posts.sort(key=lambda item:item['date'], reverse=False)
 	return render_template('posts.html', posts=posts)
 
 @app.route('/posts/<name>/')
 def post(name):
-    """For blogpost type pages"""
     path = '{}/{}'.format(POST_DIR, name)
     post = flatpages.get_or_404(path)
     return render_template('post.html', post=post)
@@ -62,4 +65,4 @@ if __name__ == "__main__":
     if len(sys.argv) > 1 and sys.argv[1] == "build":
         freezer.freeze()
     else:
-        app.run(debug=True)
+        app.run(host='0.0.0.0', debug=True)

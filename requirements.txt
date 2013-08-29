@@ -5,6 +5,7 @@ Jinja2==2.7.1
 Markdown==2.3.1
 MarkupSafe==0.18
 PyYAML==3.10
+Pygments==1.6
 Werkzeug==0.9.3
 itsdangerous==0.22
 wsgiref==0.1.2

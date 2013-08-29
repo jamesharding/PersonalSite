@@ -59,29 +59,27 @@ header h1{
         width:30px;
         height:30px;
         margin: 5px;
-        transition: 0.5s;
-        transform:scale(1);
-        border-radius: 30%;
+        transition: all 0.5s ease;
+        border-radius: 50%;
         border: 2px solid @darkblue;
         padding: 10px;
         background-color: white;
-        color: #2c3e50;
+        color: @darkblue;
         overflow: hidden;
         i{
             display: block;
-            transition: 1s;
         }
     }
-    a:hover{
-        background-color: white;
-        color: @blue;
-        // box-shadow: 0px 0px 15px -3px #000;
+    a:hover, a.active{
+        box-shadow: 0px 0px 15px 0px #FFF;
+        background-color: @darkblue;
+        color: white;
         i.icon-wrench{
             transform-origin: 25px 12px;
             animation: wrench-icon 2s infinite;
         }i.icon-plane{
             animation: airplane-icon 3s infinite;
-            color: @darkblue
+            /*color: @darkblue*/
         }
         i.icon-heart{
             color:@red;
@@ -91,6 +89,7 @@ header h1{
             animation: pencil-icon 2s infinite;
         }
         i.icon-code{
+            transition: transform 1s;
             transform: rotate(180deg);
         }
         i.icon-briefcase{
@@ -98,6 +97,7 @@ header h1{
             animation: briefcase-icon 7s infinite;
         }
         i.icon-male{
+            transition: transform 1s;
             transform: rotateY(180deg);
         }
     }
@@ -190,11 +190,12 @@ header h1{
     div.card{
         background-color: white;
         margin-top: 20px;
-        border-radius: 5px;
+        border-radius: 4px;
         p{
             padding: 10px;
             margin: 0px;
             font-size: 1.0em;
+            /*letter-spacing: 1px;*/
         }
         pre.terminal{
             padding: 10px;
@@ -204,7 +205,8 @@ header h1{
             font-family: 'Courier';
         }
         h3{
-            margin:0; 
+            margin: 0;
+            padding:15px 0px 15px 0px; 
             font-size: 2em;
             font-weight: normal;
             text-align: center;
@@ -228,6 +230,7 @@ header h1{
         h3{
             text-transform: uppercase;
             border-bottom: 2px solid;
+            padding:0px 0px 0px 0px; 
             margin:15px 30px 0px 30px;
         }
         img{
@@ -236,6 +239,24 @@ header h1{
             margin-left: auto;
             margin-right: auto;
         }
+        div.codehilite{
+            padding: 1px 20px 1px 20px;
+            font-size: 18px;
+        }
+        code{
+          display: inline-block;
+          padding: 0px 8px 0px 8px;
+          border-radius: 5px;
+          border: 2px solid black;
+          /*background-color: black;*/
+          /*color: white;*/
+        }
+        ul{
+          margin: 0px 0px 0px 15px;
+        }
+    }
+    div#disqus_thread{
+      padding: 30px;
     }
 }
 
@@ -323,154 +344,4 @@ canvas{
   to {
     transform: rotateZ(0deg);
   }
-}
-
-/*PRISM*/
-/**
- * okaidia theme for JavaScript, CSS and HTML
- * Loosely based on Monokai textmate theme by http://www.monokai.nl/
- * @author ocodia
- */
-
-code[class*="language-"],
-pre[class*="language-"] {
-    color: #f8f8f2;
-    text-shadow: 0 1px rgba(0,0,0,0.3);
-    font-family: Consolas, Monaco, 'Andale Mono', monospace;
-    direction: ltr;
-    text-align: left;
-    white-space: pre;
-    word-spacing: normal;
-    
-    -moz-tab-size: 4;
-    -o-tab-size: 4;
-    tab-size: 4;
-    
-    -webkit-hyphens: none;
-    -moz-hyphens: none;
-    -ms-hyphens: none;
-    hyphens: none;
-}
-
-/* Code blocks */
-pre[class*="language-"] {
-    padding: 1em;
-    margin: .5em 0;
-    overflow: auto; 
-    border-radius: 0px;
-}
-
-:not(pre) > code[class*="language-"],
-pre[class*="language-"] {
-    background: #272822;
-}
-
-/* Inline code */
-:not(pre) > code[class*="language-"] {
-    padding: .1em;
-    border-radius: 0px;
-}
-
-.token.comment,
-.token.prolog,
-.token.doctype,
-.token.cdata {
-    color: slategray;
-}
-
-.token.punctuation {
-    color: #f8f8f2;
-}
-
-.namespace {
-    opacity: .7;
-}
-
-.token.property,
-.token.tag {
-    color: #f92672;
-}
-
-.token.boolean,
-.token.number{
-    color: #ae81ff;
-}
-
-.token.selector,
-.token.attr-name,
-.token.string {
-    color: #a6e22e;
-}
-
-
-.token.operator,
-.token.entity,
-.token.url,
-.language-css .token.string,
-.style .token.string {
-    color: #f8f8f2;
-}
-
-.token.atrule,
-.token.attr-value
-{
-    color: #e6db74;
-}
-
-
-.token.keyword{
-color: #66d9ef;
-}
-
-.token.regex,
-.token.important {
-    color: #fd971f;
-}
-
-.token.important {
-    font-weight: bold;
-}
-
-.token.entity {
-    cursor: help;
-}
-pre.line-numbers {
-    position: relative;
-    padding-left: 3.8em;
-    counter-reset: linenumber;
-}
-
-pre.line-numbers > code {
-    position: relative;
-}
-
-.line-numbers .line-numbers-rows {
-    position: absolute;
-    pointer-events: none;
-    top: 0;
-    font-size: 100%;
-    left: -3.8em;
-    width: 3em; /* works for line-numbers below 1000 lines */
-    letter-spacing: -1px;
-    border-right: 1px solid #999;
-
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-
-}
-
-.line-numbers-rows > span {
-    pointer-events: none;
-    display: block;
-    counter-increment: linenumber;
-}
-
-.line-numbers-rows > span:before {
-    content: counter(linenumber);
-    color: #999;
-    display: block;
-    padding-right: 0.8em;
-    text-align: right;
 }
