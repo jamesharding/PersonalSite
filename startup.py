@@ -1,10 +1,11 @@
 import sys
 from flask import Flask
-from flask import render_template
-
+from flask import render_template, request
+from datetime import date
 from flask_flatpages import FlatPages, pygments_style_defs
 from flask_frozen import Freezer
 
+BASE_URL = 'http://www.jamesharding.ca'
 DEBUG = True
 FLATPAGES_AUTO_RELOAD = DEBUG
 FLATPAGES_EXTENSION = '.md'
@@ -16,6 +17,10 @@ flatpages = FlatPages(app)
 freezer = Freezer(app)
 
 app.config.from_object(__name__)
+
+@app.context_processor
+def inject_ga():
+    return dict(BASE_URL=BASE_URL)
 
 @app.route('/pygments.css')
 def pygments_css():
@@ -56,6 +61,14 @@ def post(name):
     path = '{}/{}'.format(POST_DIR, name)
     post = flatpages.get_or_404(path)
     return render_template('post.html', post=post)
+
+@app.route('/sitemap.xml')
+def sitemap():
+	today = date.today()
+	recently = date(year=today.year, month=today.month, day=1)
+	posts = [p for p in flatpages if p.path.startswith(POST_DIR)]
+	posts.sort(key=lambda item:item['date'], reverse=False)
+	return render_template('sitemap.xml', posts=posts, today=today, recently=recently)
 
 @app.errorhandler(404)
 def page_not_found(e):
