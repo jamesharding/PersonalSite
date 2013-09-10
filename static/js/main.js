@@ -15,8 +15,9 @@ $(document).ready(function(){
 		$.get(th.href, function(data) {
 			var $data = $(data);
 
-			// Replace content
+			// Replace title and description
 			document.title = $data.filter('title').text();
+			$('meta[name=description]').attr('content', $data.filter('meta[name=description]').attr('content'));
 			
 			// Track on Piwik
 			_paq.push(['setCustomUrl', window.location]);
