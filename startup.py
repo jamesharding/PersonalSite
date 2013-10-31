@@ -62,6 +62,10 @@ def post(name):
     post = flatpages.get_or_404(path)
     return render_template('post.html', post=post)
 
+@app.route('/robots.txt')
+def robots():
+	return render_template('robots.txt')
+
 @app.route('/sitemap.xml')
 def sitemap():
 	today = date.today()
