@@ -34,9 +34,9 @@ def home():
 def engineer():
 	return render_template('engineer.html')
 
-@app.route("/aviation/")
+@app.route("/pilot/")
 def aviation():
-	return render_template('aviation.html')
+	return render_template('pilot.html')
 
 @app.route("/hobbies/")
 def hobbies():
@@ -45,6 +45,10 @@ def hobbies():
 @app.route("/projects/")
 def projects():
 	return render_template('projects.html')
+
+@app.route("/resume/")
+def resume():
+	return render_template('resume.html')
 
 @app.route("/work-experience/")
 def workexperience():

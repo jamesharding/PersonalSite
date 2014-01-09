@@ -13,7 +13,7 @@
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>{{ BASE_URL }}/aviation/</loc>
+        <loc>{{ BASE_URL }}/pilot/</loc>
         <lastmod>{{ recently }}</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>

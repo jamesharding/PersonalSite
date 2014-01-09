@@ -1,0 +1,170 @@
+{% extends "index.html" %}
+            {% block title %}Resume{% endblock %}
+            {% block description %}Professional resume for James Harding: Software Engineer and Pilot{% endblock %}
+            {% block content %}
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    var ctx = document.getElementById("myChart").getContext("2d");
+                    var data = {
+                        labels : ["C++","Java","Python","PHP","Javascript","HTML","CSS"],
+                        datasets : [
+                            {
+                                fillColor : "rgba(52, 152, 219,0.7)",
+                                strokeColor : "rgba(44, 62, 80,1.0)",
+                                pointColor : "rgba(41, 128, 185,1.0)",
+                                pointStrokeColor : "rgba(44, 62, 80,1.0)",
+                                data : [70,70,80,80,80,95,95]
+                            }
+                        ]
+                    }
+                    var options = {
+
+                        //Boolean - If we show the scale above the chart data
+                        scaleOverlay : false,
+
+                        //Boolean - If we want to override with a hard coded scale
+                        scaleOverride : true,
+
+                        //** Required if scaleOverride is true **
+                        //Number - The number of steps in a hard coded scale
+                        scaleSteps : 10,
+                        //Number - The value jump in the hard coded scale
+                        scaleStepWidth : 10,
+                        //Number - The centre starting value
+                        scaleStartValue : 0,
+
+                        //Boolean - Whether to show lines for each scale point
+                        scaleShowLine : true,
+
+                        //String - Colour of the scale line
+                        scaleLineColor : "rgba(0,0,0,.1)",
+
+                        //Number - Pixel width of the scale line
+                        scaleLineWidth : 2,
+
+                        //Boolean - Whether to show labels on the scale
+                        scaleShowLabels : false,
+
+                        //Interpolated JS string - can access value
+                        scaleLabel : "<%=value%>",
+
+                        //String - Scale label font declaration for the scale label
+                        scaleFontFamily : "'Arial'",
+
+                        //Number - Scale label font size in pixels
+                        scaleFontSize : 16,
+
+                        //String - Scale label font weight style
+                        scaleFontStyle : "normal",
+
+                        //String - Scale label font colour
+                        scaleFontColor : "#666",
+
+                        //Boolean - Show a backdrop to the scale label
+                        scaleShowLabelBackdrop : true,
+
+                        //String - The colour of the label backdrop
+                        scaleBackdropColor : "rgba(255,255,255,0.75)",
+
+                        //Number - The backdrop padding above & below the label in pixels
+                        scaleBackdropPaddingY : 2,
+
+                        //Number - The backdrop padding to the side of the label in pixels
+                        scaleBackdropPaddingX : 2,
+
+                        //Boolean - Whether we show the angle lines out of the radar
+                        angleShowLineOut : true,
+
+                        //String - Colour of the angle line
+                        angleLineColor : "rgba(0,0,0,.1)",
+
+                        //Number - Pixel width of the angle line
+                        angleLineWidth : 1,
+
+                        //String - Point label font declaration
+                        pointLabelFontFamily : "'Arial'",
+
+                        //String - Point label font weight
+                        pointLabelFontStyle : "normal",
+
+                        //Number - Point label font size in pixels
+                        pointLabelFontSize : 14,
+
+                        //String - Point label font colour
+                        pointLabelFontColor : "#666",
+
+                        //Boolean - Whether to show a dot for each point
+                        pointDot : true,
+
+                        //Number - Radius of each point dot in pixels
+                        pointDotRadius : 3,
+
+                        //Number - Pixel width of point dot stroke
+                        pointDotStrokeWidth : 1,
+
+                        //Boolean - Whether to show a stroke for datasets
+                        datasetStroke : true,
+
+                        //Number - Pixel width of dataset stroke
+                        datasetStrokeWidth : 2,
+
+                        //Boolean - Whether to fill the dataset with a colour
+                        datasetFill : true,
+
+                        //Boolean - Whether to animate the chart
+                        animation : true,
+
+                        //Number - Number of animation steps
+                        animationSteps : 60*4,
+
+                        //String - Animation easing effect
+                        animationEasing : "easeOutQuart",
+
+                        //Function - Fires when the animation is complete
+                        onAnimationComplete : null
+
+                    }
+                    var myNewChart = new Chart(ctx).Radar(data,options);
+                });
+            </script>
+
+            <div class="title">
+                <h2>Resume</h2>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="one-third column">
+                        <div class="card">
+                            <h3>James Harding</h3>
+                        </div>
+                        <div class="card">
+                            <p>I am a computer engineering student who is passionate about technology and software.</p>
+                            <p>In my spare time I love flying, programming, photography, videography, and website development!</p>
+                        </div>
+                    </div>
+                    <div class="two-thirds column">
+                        <div class="card">
+                            <h3>Education</h3>
+                        </div>
+                        <div class="one-third column alpha card">
+                            <p><b>Centennial CVI</b><br>2006 - 2010</p>
+                            <p>94% Average<br>Honours</p>
+                        </div>
+                        <div class="one-third column omega card">
+                            <p><b>University of Toronto</b><br>Computer Engineering<br>2010 - 2014</p>
+                            <p>Latest GPA: 3.5/4.0<br>Top 25% Ranking</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="sixteen columns card">
+                        <h3>Professional Skills</h3>
+                    </div>
+                    <div class="eight columns">
+                        <div class="card">
+                            <canvas id="myChart" width="600" height="400"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endblock %}
