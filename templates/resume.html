@@ -6,14 +6,14 @@
                 $(document).ready(function(){
                     var ctx = document.getElementById("myChart").getContext("2d");
                     var data = {
-                        labels : ["C++","Java","Python","PHP","Javascript","HTML","CSS"],
+                        labels : ["MATLAB","PHP","JS","SQL","C++","Python","HTML","CSS"],
                         datasets : [
                             {
                                 fillColor : "rgba(52, 152, 219,0.7)",
                                 strokeColor : "rgba(44, 62, 80,1.0)",
                                 pointColor : "rgba(41, 128, 185,1.0)",
                                 pointStrokeColor : "rgba(44, 62, 80,1.0)",
-                                data : [70,70,80,80,80,95,95]
+                                data : [10,50,60,70,80,95,95,95]
                             }
                         ]
                     }
@@ -30,17 +30,14 @@
                         scaleSteps : 10,
                         //Number - The value jump in the hard coded scale
                         scaleStepWidth : 10,
-                        //Number - The centre starting value
+                        //Number - The scale starting value
                         scaleStartValue : 0,
-
-                        //Boolean - Whether to show lines for each scale point
-                        scaleShowLine : true,
 
                         //String - Colour of the scale line
                         scaleLineColor : "rgba(0,0,0,.1)",
 
                         //Number - Pixel width of the scale line
-                        scaleLineWidth : 2,
+                        scaleLineWidth : 1,
 
                         //Boolean - Whether to show labels on the scale
                         scaleShowLabels : false,
@@ -60,71 +57,41 @@
                         //String - Scale label font colour
                         scaleFontColor : "#666",
 
-                        //Boolean - Show a backdrop to the scale label
-                        scaleShowLabelBackdrop : true,
+                        ///Boolean - Whether grid lines are shown across the chart
+                        scaleShowGridLines : false,
 
-                        //String - The colour of the label backdrop
-                        scaleBackdropColor : "rgba(255,255,255,0.75)",
+                        //String - Colour of the grid lines
+                        scaleGridLineColor : "rgba(0,0,0,.05)",
 
-                        //Number - The backdrop padding above & below the label in pixels
-                        scaleBackdropPaddingY : 2,
+                        //Number - Width of the grid lines
+                        scaleGridLineWidth : 1,
 
-                        //Number - The backdrop padding to the side of the label in pixels
-                        scaleBackdropPaddingX : 2,
+                        //Boolean - If there is a stroke on each bar
+                        barShowStroke : true,
 
-                        //Boolean - Whether we show the angle lines out of the radar
-                        angleShowLineOut : true,
+                        //Number - Pixel width of the bar stroke
+                        barStrokeWidth : 0,
 
-                        //String - Colour of the angle line
-                        angleLineColor : "rgba(0,0,0,.1)",
+                        //Number - Spacing between each of the X value sets
+                        barValueSpacing : 10,
 
-                        //Number - Pixel width of the angle line
-                        angleLineWidth : 1,
-
-                        //String - Point label font declaration
-                        pointLabelFontFamily : "'Arial'",
-
-                        //String - Point label font weight
-                        pointLabelFontStyle : "normal",
-
-                        //Number - Point label font size in pixels
-                        pointLabelFontSize : 14,
-
-                        //String - Point label font colour
-                        pointLabelFontColor : "#666",
-
-                        //Boolean - Whether to show a dot for each point
-                        pointDot : true,
-
-                        //Number - Radius of each point dot in pixels
-                        pointDotRadius : 3,
-
-                        //Number - Pixel width of point dot stroke
-                        pointDotStrokeWidth : 1,
-
-                        //Boolean - Whether to show a stroke for datasets
-                        datasetStroke : true,
-
-                        //Number - Pixel width of dataset stroke
-                        datasetStrokeWidth : 2,
-
-                        //Boolean - Whether to fill the dataset with a colour
-                        datasetFill : true,
+                        //Number - Spacing between data sets within X values
+                        barDatasetSpacing : 1,
 
                         //Boolean - Whether to animate the chart
                         animation : true,
 
                         //Number - Number of animation steps
-                        animationSteps : 60*4,
+                        animationSteps : 300,
 
                         //String - Animation easing effect
-                        animationEasing : "easeOutQuart",
+                        animationEasing : "easeOutExpo",
 
                         //Function - Fires when the animation is complete
                         onAnimationComplete : null
 
                     }
-                    var myNewChart = new Chart(ctx).Radar(data,options);
+                    var myNewChart = new Chart(ctx).Bar(data,options);
                 });
             </script>
 
@@ -152,7 +119,7 @@
                         </div>
                         <div class="one-third column omega card">
                             <p><b>University of Toronto</b><br>Computer Engineering<br>2010 - 2014</p>
-                            <p>Latest GPA: 3.5/4.0<br>Top 25% Ranking</p>
+                            <p>Most Recent GPA: 3.5/4.0<br>Top 25% Ranking</p>
                         </div>
                     </div>
                 </div>
@@ -160,10 +127,34 @@
                     <div class="sixteen columns card">
                         <h3>Professional Skills</h3>
                     </div>
+                    <div class="eight columns card">
+                        <canvas id="myChart" width="600" height="400"></canvas>
+                    </div>
                     <div class="eight columns">
                         <div class="card">
-                            <canvas id="myChart" width="600" height="400"></canvas>
+                            <p>Having been employed professionally as a software engineer and worked freelance contracts, I have extensive real-world programming experience.<br><br>Read on for work examples.</p>
                         </div>
+                        <div class="card">
+                            <p>In addition to my software knowledge, I am also qualified as a <b>Private Pilot</b> and as a <b>Glider Check Pilot</b>.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="sixteen columns card">
+                        <h3>Relevant Experience</h3>
+                    </div>
+                    <div class="eight columns card">
+                        <h4><a href="http://www.eventmobi.com/">EventMobi</a> Software Engineer</h4>
+                        <ul>
+                            <li>Automated API documentation system (Python)</li>
+                            <li>Added LinkedIn profile integration to EventMobi account (JS)</li>
+                            <li>Pinch-to-zoom maps with zoom to location (JS)</li>
+                            <li>In-app rich banner ads (PHP, JS, CSS)</li>
+                        </ul>
+                    </div>
+                    <div class="eight columns card">
+                        <h4><a href="http://www.eventmobi.com/">Freelance</a> Software Engineer</h4>
+                        <p></p>
                     </div>
                 </div>
             </div>
