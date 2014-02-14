@@ -36,7 +36,7 @@ $(document).ready(function(){
 					$('#loader').fadeOut(500);
 					$('#content').removeClass('notransition');
 					$('#content').removeClass('right');
-				}, 500);
+				}, 100);
 			}, 550);
 
 				
