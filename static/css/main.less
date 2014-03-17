@@ -241,7 +241,7 @@ header h1{
         h3{
             text-transform: uppercase;
             border-bottom: 2px solid;
-            padding:0px 0px 0px 0px; 
+            padding:0px 0px 0px 0px;
             margin:15px 30px 0px 30px;
         }
         img{
@@ -249,6 +249,34 @@ header h1{
             display: block;
             margin-left: auto;
             margin-right: auto;
+        }
+        div.fw-image{
+            width: 100%;
+            span.caption{
+              display: block;
+              text-align: center;
+              font-size: 0.8em;
+            }
+        }
+        div.hw-image-left{
+            width: 45%;
+            float: left;
+            margin-right: 20px;
+            span.caption{
+              display: block;
+              text-align: center;
+              font-size: 0.8em;
+            }
+        }
+        div.hw-image-right{
+            width: 45%;
+            float: right;
+            margin-left: 20px;
+            span.caption{
+              display: block;
+              text-align: center;
+              font-size: 0.8em;
+            }
         }
         div.codehilite{
             padding: 1px 20px 1px 20px;
@@ -263,6 +291,9 @@ header h1{
           /*color: white;*/
         }
         ul{
+          margin: 0px 0px 0px 40px;
+        }
+        ol{
           margin: 0px 0px 0px 40px;
         }
     }
@@ -295,11 +326,11 @@ canvas{
     }
     #hello{
         font-size: 2em;
-    } 
+    }
     #noun{
         top: -10px;
         padding-bottom: 5px;
-    }  
+    }
 }
 
 
@@ -356,4 +387,3 @@ canvas{
     transform: rotateZ(0deg);
   }
 }
-
