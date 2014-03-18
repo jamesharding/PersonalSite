@@ -66,4 +66,4 @@ In June of this year, I will begin on the next major quest in my life by startin
 
 At this point, I can say with full confidence that my future will consist of a blending of my two passions. I am looking forward to my ground school studies as part of my upcoming flying course because I know that I find the subject intrinsically interesting. I know that I look forward to learning new programming techniques and building new software in my own time because I have experimentally determined that this is what makes me tick.
 
-The future is full of unknowns, which is exciting because what I do know is that it well be spent tackling problem involving something I love - and I have my time at the University of Toronto Engineering faculty to thank for helping me figure this out.
+The future is full of unknowns, which is exciting because what I do know is that it will be spent tackling problem involving something I love - and I have my time at the University of Toronto Engineering faculty to thank for helping me figure this out.
