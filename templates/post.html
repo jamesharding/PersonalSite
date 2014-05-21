@@ -1,6 +1,6 @@
 {% extends "index.html" %}
             {% block title %}{{ post.title }}{% endblock %}
-            {% block description %}Author: James Harding, Date: {{ post.date }}, Description: {{ post.description }}{% endblock %}
+            {% block description %}{{ post.description }}{% endblock %}
             {% block content %}
             <div class="title">
                 <div class="container">
