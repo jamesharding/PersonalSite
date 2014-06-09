@@ -453,6 +453,9 @@ header h1 {
   -ms-transform: translate(100%, 0);
   transform: translate(100%, 0);
 }
+.center {
+  text-align: center;
+}
 #content {
   margin-top: 10px;
   color: #2c3e50;
@@ -491,6 +494,9 @@ header h1 {
 #content div.card ul {
   padding: 10px;
   margin: 0px 30px 20px 30px;
+}
+#content div.card ul.flip {
+  margin: 5px;
 }
 #content div.card pre.terminal {
   padding: 10px;
@@ -592,7 +598,7 @@ header h1 {
 #content div#disqus_thread {
   padding: 30px;
 }
-canvas {
+canvas#myChart {
   width: 100% !important;
   max-width: 800px;
   height: auto !important;
