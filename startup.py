@@ -34,6 +34,10 @@ def home():
 def katerina():
     return render_template('katerina.html')
 
+@app.route("/fathersday/")
+def fathersday():
+    return render_template('fathersday.html')
+
 @app.route("/engineer/")
 def engineer():
     return render_template('engineer.html')
