@@ -37,7 +37,7 @@ header h1 {
   margin-left: 3px;
   margin-right: 3px;
   -webkit-transition: 0.5s;
-  transition: 0.5s;
+          transition: 0.5s;
   text-shadow: 1px 1px 2px #196090;
 }
 #social a:hover {
@@ -53,7 +53,7 @@ header h1 {
   height: 30px;
   margin: 5px;
   -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
+          transition: all 0.5s ease;
   border-radius: 50%;
   border: 2px solid #2c3e50;
   padding: 10px;
@@ -67,391 +67,346 @@ header h1 {
 #menu a:hover,
 #menu a.active {
   -webkit-box-shadow: 0px 0px 15px 0px #FFF;
-  box-shadow: 0px 0px 15px 0px #FFF;
+          box-shadow: 0px 0px 15px 0px #FFF;
   background-color: #2c3e50;
   color: white;
 }
 #menu a:hover i.icon-wrench,
 #menu a.active i.icon-wrench {
   -webkit-transform-origin: 25px 12px;
-  -ms-transform-origin: 25px 12px;
-  transform-origin: 25px 12px;
+      -ms-transform-origin: 25px 12px;
+          transform-origin: 25px 12px;
   -webkit-animation: wrench-icon 2s infinite;
-  animation: wrench-icon 2s infinite;
+          animation: wrench-icon 2s infinite;
 }
 #menu a:hover i.icon-plane,
 #menu a.active i.icon-plane {
   -webkit-animation: airplane-icon 3s infinite;
-  animation: airplane-icon 3s infinite;
+          animation: airplane-icon 3s infinite;
   /*color: @darkblue*/
 }
 #menu a:hover i.icon-heart,
 #menu a.active i.icon-heart {
   color: #e74c3c;
   -webkit-animation: heart-icon 1s infinite;
-  animation: heart-icon 1s infinite;
+          animation: heart-icon 1s infinite;
 }
 #menu a:hover i.icon-pencil,
 #menu a.active i.icon-pencil {
   -webkit-animation: pencil-icon 2s infinite;
-  animation: pencil-icon 2s infinite;
+          animation: pencil-icon 2s infinite;
 }
 #menu a:hover i.icon-code,
 #menu a.active i.icon-code {
   -webkit-transition: -webkit-transform 1s;
-  transition: transform 1s;
+          transition: transform 1s;
   -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 #menu a:hover i.icon-briefcase,
 #menu a.active i.icon-briefcase {
   -webkit-transform-origin: 16px 4px;
-  -ms-transform-origin: 16px 4px;
-  transform-origin: 16px 4px;
+      -ms-transform-origin: 16px 4px;
+          transform-origin: 16px 4px;
   -webkit-animation: briefcase-icon 7s infinite;
-  animation: briefcase-icon 7s infinite;
+          animation: briefcase-icon 7s infinite;
 }
 #menu a:hover i.icon-male,
 #menu a.active i.icon-male {
   -webkit-transition: -webkit-transform 1s;
-  transition: transform 1s;
+          transition: transform 1s;
   -webkit-transform: rotateY(180deg);
-  -ms-transform: rotateY(180deg);
-  transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 @-webkit-keyframes wrench-icon {
   0% {
     -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   20% {
     -webkit-transform: rotate(30deg);
-    transform: rotate(30deg);
+            transform: rotate(30deg);
   }
   40% {
     -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   60% {
     -webkit-transform: rotate(30deg);
-    transform: rotate(30deg);
+            transform: rotate(30deg);
   }
   80% {
     -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
+            transform: rotate(0deg);
   }
 }
 @keyframes wrench-icon {
   0% {
     -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   20% {
     -webkit-transform: rotate(30deg);
-    -ms-transform: rotate(30deg);
-    transform: rotate(30deg);
+            transform: rotate(30deg);
   }
   40% {
     -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   60% {
     -webkit-transform: rotate(30deg);
-    -ms-transform: rotate(30deg);
-    transform: rotate(30deg);
+            transform: rotate(30deg);
   }
   80% {
     -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
+            transform: rotate(0deg);
   }
 }
 @-webkit-keyframes heart-icon {
   0% {
     -webkit-transform: scale(1);
-    transform: scale(1);
+            transform: scale(1);
   }
   10% {
     -webkit-transform: scale(1.1);
-    transform: scale(1.1);
+            transform: scale(1.1);
   }
   20% {
     -webkit-transform: scale(1);
-    transform: scale(1);
+            transform: scale(1);
   }
   30% {
     -webkit-transform: scale(1.1);
-    transform: scale(1.1);
+            transform: scale(1.1);
   }
   40% {
     -webkit-transform: scale(1);
-    transform: scale(1);
+            transform: scale(1);
   }
 }
 @keyframes heart-icon {
   0% {
     -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
+            transform: scale(1);
   }
   10% {
     -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
+            transform: scale(1.1);
   }
   20% {
     -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
+            transform: scale(1);
   }
   30% {
     -webkit-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.1);
+            transform: scale(1.1);
   }
   40% {
     -webkit-transform: scale(1);
-    -ms-transform: scale(1);
-    transform: scale(1);
+            transform: scale(1);
   }
 }
 @-webkit-keyframes airplane-icon {
   0% {
     -webkit-transform: translate(0px, 0px) rotate(0deg);
-    transform: translate(0px, 0px) rotate(0deg);
+            transform: translate(0px, 0px) rotate(0deg);
   }
   10% {
     -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
+            transform: rotate(-45deg);
   }
   23% {
     -webkit-transform: translate(0px, -40px) rotate(-45deg);
-    transform: translate(0px, -40px) rotate(-45deg);
+            transform: translate(0px, -40px) rotate(-45deg);
   }
   24% {
     -webkit-transform: translate(100px, -40px) rotate(-45deg);
-    transform: translate(100px, -40px) rotate(-45deg);
+            transform: translate(100px, -40px) rotate(-45deg);
   }
   25% {
     -webkit-transform: translate(100px, 0px) rotate(-45deg);
-    transform: translate(100px, 0px) rotate(-45deg);
+            transform: translate(100px, 0px) rotate(-45deg);
   }
   26% {
     -webkit-transform: translate(100px, 40px) rotate(-45deg);
-    transform: translate(100px, 40px) rotate(-45deg);
+            transform: translate(100px, 40px) rotate(-45deg);
   }
   27% {
     -webkit-transform: translate(0px, 40px) rotate(-45deg);
-    transform: translate(0px, 40px) rotate(-45deg);
+            transform: translate(0px, 40px) rotate(-45deg);
   }
   40% {
     -webkit-transform: translate(0px, 0px) rotate(-45deg);
-    transform: translate(0px, 0px) rotate(-45deg);
+            transform: translate(0px, 0px) rotate(-45deg);
   }
   50% {
     -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
+            transform: rotate(0deg);
   }
 }
 @keyframes airplane-icon {
   0% {
     -webkit-transform: translate(0px, 0px) rotate(0deg);
-    -ms-transform: translate(0px, 0px) rotate(0deg);
-    transform: translate(0px, 0px) rotate(0deg);
+            transform: translate(0px, 0px) rotate(0deg);
   }
   10% {
     -webkit-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    transform: rotate(-45deg);
+            transform: rotate(-45deg);
   }
   23% {
     -webkit-transform: translate(0px, -40px) rotate(-45deg);
-    -ms-transform: translate(0px, -40px) rotate(-45deg);
-    transform: translate(0px, -40px) rotate(-45deg);
+            transform: translate(0px, -40px) rotate(-45deg);
   }
   24% {
     -webkit-transform: translate(100px, -40px) rotate(-45deg);
-    -ms-transform: translate(100px, -40px) rotate(-45deg);
-    transform: translate(100px, -40px) rotate(-45deg);
+            transform: translate(100px, -40px) rotate(-45deg);
   }
   25% {
     -webkit-transform: translate(100px, 0px) rotate(-45deg);
-    -ms-transform: translate(100px, 0px) rotate(-45deg);
-    transform: translate(100px, 0px) rotate(-45deg);
+            transform: translate(100px, 0px) rotate(-45deg);
   }
   26% {
     -webkit-transform: translate(100px, 40px) rotate(-45deg);
-    -ms-transform: translate(100px, 40px) rotate(-45deg);
-    transform: translate(100px, 40px) rotate(-45deg);
+            transform: translate(100px, 40px) rotate(-45deg);
   }
   27% {
     -webkit-transform: translate(0px, 40px) rotate(-45deg);
-    -ms-transform: translate(0px, 40px) rotate(-45deg);
-    transform: translate(0px, 40px) rotate(-45deg);
+            transform: translate(0px, 40px) rotate(-45deg);
   }
   40% {
     -webkit-transform: translate(0px, 0px) rotate(-45deg);
-    -ms-transform: translate(0px, 0px) rotate(-45deg);
-    transform: translate(0px, 0px) rotate(-45deg);
+            transform: translate(0px, 0px) rotate(-45deg);
   }
   50% {
     -webkit-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    transform: rotate(0deg);
+            transform: rotate(0deg);
   }
 }
 @-webkit-keyframes pencil-icon {
   0% {
     -webkit-transform: translate(0px, 0px) rotate(-5deg);
-    transform: translate(0px, 0px) rotate(-5deg);
+            transform: translate(0px, 0px) rotate(-5deg);
   }
   10% {
     -webkit-transform: translate(2px, 0px) rotate(5deg);
-    transform: translate(2px, 0px) rotate(5deg);
+            transform: translate(2px, 0px) rotate(5deg);
   }
   20% {
     -webkit-transform: translate(4px, 0px) rotate(-5deg);
-    transform: translate(4px, 0px) rotate(-5deg);
+            transform: translate(4px, 0px) rotate(-5deg);
   }
   30% {
     -webkit-transform: translate(6px, 0px) rotate(5deg);
-    transform: translate(6px, 0px) rotate(5deg);
+            transform: translate(6px, 0px) rotate(5deg);
   }
   40% {
     -webkit-transform: translate(8px, 0px) rotate(-5deg);
-    transform: translate(8px, 0px) rotate(-5deg);
+            transform: translate(8px, 0px) rotate(-5deg);
   }
   50% {
     -webkit-transform: translate(10px, 0px) rotate(5deg);
-    transform: translate(10px, 0px) rotate(5deg);
+            transform: translate(10px, 0px) rotate(5deg);
   }
   60% {
     -webkit-transform: translate(12px, 0px) rotate(-5deg);
-    transform: translate(12px, 0px) rotate(-5deg);
+            transform: translate(12px, 0px) rotate(-5deg);
   }
   70% {
     -webkit-transform: translate(14px, 0px) rotate(5deg);
-    transform: translate(14px, 0px) rotate(5deg);
+            transform: translate(14px, 0px) rotate(5deg);
   }
 }
 @keyframes pencil-icon {
   0% {
     -webkit-transform: translate(0px, 0px) rotate(-5deg);
-    -ms-transform: translate(0px, 0px) rotate(-5deg);
-    transform: translate(0px, 0px) rotate(-5deg);
+            transform: translate(0px, 0px) rotate(-5deg);
   }
   10% {
     -webkit-transform: translate(2px, 0px) rotate(5deg);
-    -ms-transform: translate(2px, 0px) rotate(5deg);
-    transform: translate(2px, 0px) rotate(5deg);
+            transform: translate(2px, 0px) rotate(5deg);
   }
   20% {
     -webkit-transform: translate(4px, 0px) rotate(-5deg);
-    -ms-transform: translate(4px, 0px) rotate(-5deg);
-    transform: translate(4px, 0px) rotate(-5deg);
+            transform: translate(4px, 0px) rotate(-5deg);
   }
   30% {
     -webkit-transform: translate(6px, 0px) rotate(5deg);
-    -ms-transform: translate(6px, 0px) rotate(5deg);
-    transform: translate(6px, 0px) rotate(5deg);
+            transform: translate(6px, 0px) rotate(5deg);
   }
   40% {
     -webkit-transform: translate(8px, 0px) rotate(-5deg);
-    -ms-transform: translate(8px, 0px) rotate(-5deg);
-    transform: translate(8px, 0px) rotate(-5deg);
+            transform: translate(8px, 0px) rotate(-5deg);
   }
   50% {
     -webkit-transform: translate(10px, 0px) rotate(5deg);
-    -ms-transform: translate(10px, 0px) rotate(5deg);
-    transform: translate(10px, 0px) rotate(5deg);
+            transform: translate(10px, 0px) rotate(5deg);
   }
   60% {
     -webkit-transform: translate(12px, 0px) rotate(-5deg);
-    -ms-transform: translate(12px, 0px) rotate(-5deg);
-    transform: translate(12px, 0px) rotate(-5deg);
+            transform: translate(12px, 0px) rotate(-5deg);
   }
   70% {
     -webkit-transform: translate(14px, 0px) rotate(5deg);
-    -ms-transform: translate(14px, 0px) rotate(5deg);
-    transform: translate(14px, 0px) rotate(5deg);
+            transform: translate(14px, 0px) rotate(5deg);
   }
 }
 @-webkit-keyframes briefcase-icon {
   10% {
     -webkit-transform: rotate(15deg);
-    transform: rotate(15deg);
+            transform: rotate(15deg);
   }
   20% {
     -webkit-transform: rotate(-15deg);
-    transform: rotate(-15deg);
+            transform: rotate(-15deg);
   }
   30% {
     -webkit-transform: rotate(15deg);
-    transform: rotate(15deg);
+            transform: rotate(15deg);
   }
   40% {
     -webkit-transform: rotate(-15deg);
-    transform: rotate(-15deg);
+            transform: rotate(-15deg);
   }
   50% {
     -webkit-transform: rotate(15deg);
-    transform: rotate(15deg);
+            transform: rotate(15deg);
   }
   60% {
     -webkit-transform: rotate(-15deg);
-    transform: rotate(-15deg);
+            transform: rotate(-15deg);
   }
 }
 @keyframes briefcase-icon {
   10% {
     -webkit-transform: rotate(15deg);
-    -ms-transform: rotate(15deg);
-    transform: rotate(15deg);
+            transform: rotate(15deg);
   }
   20% {
     -webkit-transform: rotate(-15deg);
-    -ms-transform: rotate(-15deg);
-    transform: rotate(-15deg);
+            transform: rotate(-15deg);
   }
   30% {
     -webkit-transform: rotate(15deg);
-    -ms-transform: rotate(15deg);
-    transform: rotate(15deg);
+            transform: rotate(15deg);
   }
   40% {
     -webkit-transform: rotate(-15deg);
-    -ms-transform: rotate(-15deg);
-    transform: rotate(-15deg);
+            transform: rotate(-15deg);
   }
   50% {
     -webkit-transform: rotate(15deg);
-    -ms-transform: rotate(15deg);
-    transform: rotate(15deg);
+            transform: rotate(15deg);
   }
   60% {
     -webkit-transform: rotate(-15deg);
-    -ms-transform: rotate(-15deg);
-    transform: rotate(-15deg);
+            transform: rotate(-15deg);
   }
 }
-.notransition {
-  -webkit-transition: none !important;
-  transition: none !important;
-}
-.left {
-  position: relative;
-  -webkit-transform: translate(-100%, 0);
-  -ms-transform: translate(-100%, 0);
-  transform: translate(-100%, 0);
-}
-.right {
-  position: relative;
-  -webkit-transform: translate(100%, 0);
-  -ms-transform: translate(100%, 0);
-  transform: translate(100%, 0);
+.faded {
+  opacity: 0.2;
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
 }
 .center {
   text-align: center;
@@ -460,8 +415,11 @@ header h1 {
   margin-top: 10px;
   color: #2c3e50;
   position: relative;
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
+  -webkit-transform: none;
+      -ms-transform: none;
+          transform: none;
+  -webkit-transition: -webkit-filter 0.3s, opacity 0.2s;
+          transition: filter 0.3s, opacity 0.2s;
   /*Title block styling*/
   /*Content "card" styling*/
   /*Blog post styling*/
@@ -637,7 +595,7 @@ canvas#myChart {
 #loader {
   text-align: center;
   -webkit-transition: left .5s ease;
-  transition: left .5s ease;
+          transition: left .5s ease;
   height: 0px;
 }
 .center-loader {
@@ -653,14 +611,14 @@ canvas#myChart {
   border-top: 3px solid white;
   border-radius: 50%;
   -webkit-animation: rotate linear infinite;
-  animation: rotate linear infinite;
+          animation: rotate linear infinite;
   content: '';
 }
 .loader-xbox {
   height: 100px;
   width: 100px;
   -webkit-animation-duration: 1.05s;
-  animation-duration: 1.05s;
+          animation-duration: 1.05s;
 }
 .loader-xbox:before {
   height: 75px;
@@ -668,7 +626,7 @@ canvas#myChart {
   top: 10px;
   left: 10px;
   -webkit-animation-duration: 10s;
-  animation-duration: 10s;
+          animation-duration: 10s;
 }
 .loader-xbox:after {
   height: 50px;
@@ -676,27 +634,25 @@ canvas#myChart {
   top: 22px;
   left: 22px;
   -webkit-animation-duration: 4s;
-  animation-duration: 4s;
+          animation-duration: 4s;
 }
 @-webkit-keyframes rotate {
   from {
     -webkit-transform: rotateZ(360deg);
-    transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
   }
   to {
     -webkit-transform: rotateZ(0deg);
-    transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
   }
 }
 @keyframes rotate {
   from {
     -webkit-transform: rotateZ(360deg);
-    -ms-transform: rotateZ(360deg);
-    transform: rotateZ(360deg);
+            transform: rotateZ(360deg);
   }
   to {
     -webkit-transform: rotateZ(0deg);
-    -ms-transform: rotateZ(0deg);
-    transform: rotateZ(0deg);
+            transform: rotateZ(0deg);
   }
 }

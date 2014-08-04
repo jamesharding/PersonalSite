@@ -9,11 +9,16 @@ $(document).ready(function(){
 		$('a.active').removeClass('active');
 		$('#menu a[href="'+window.location.pathname+'"]').addClass('active');
 
-		$('#content').addClass('left');
-		$('#loader').fadeIn(500);
+		$('#content').addClass('faded');
 
 		$.get(th.href, function(data) {
 			var $data = $(data);
+            $('#content').html( $data.filter('#content')[0].children );
+
+            setTimeout(function(){
+                $('#content').removeClass('faded');
+            }, 300);
+
 
 			// Replace title and description
 			document.title = $data.filter('title').text();
@@ -24,22 +29,6 @@ $(document).ready(function(){
 			_paq.push(['setDocumentTitle', document.title]);
 			_paq.push(['trackPageView']);
 			_gaq.push(['_trackPageview']);
-
-			setTimeout(function(){
-				// Replace content
-				$('#content').html( $data.filter('#content')[0].children );
-				$('#content').addClass('notransition');
-				$('#content').addClass('right');
-				$('#content').removeClass('left');
-
-				setTimeout(function(){
-					$('#loader').fadeOut(500);
-					$('#content').removeClass('notransition');
-					$('#content').removeClass('right');
-				}, 100);
-			}, 550);
-
-				
 			
 		});
 		return false;
@@ -52,6 +41,9 @@ $(document).ready(function(){
 				$.get(location.pathname, function(data) {
 					$('#content').html( $(data).filter('#content')[0].children );
 					document.title = $(data).filter('title').text();
+
+                    $('a.active').removeClass('active');
+		            $('#menu a[href="'+window.location.pathname+'"]').addClass('active');
 				});
 				return false;
 			});
