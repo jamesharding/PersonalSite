@@ -10,6 +10,7 @@ $(document).ready(function(){
 		$('#menu a[href="'+window.location.pathname+'"]').addClass('active');
 
 		$('#content').addClass('faded');
+        $('#loader').show(100);
 
 		$.get(th.href, function(data) {
 			var $data = $(data);
@@ -17,6 +18,7 @@ $(document).ready(function(){
 
             setTimeout(function(){
                 $('#content').removeClass('faded');
+                $('#loader').hide(100);
             }, 300);
 
 

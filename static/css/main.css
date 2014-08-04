@@ -404,7 +404,7 @@ header h1 {
   }
 }
 .faded {
-  opacity: 0.5;
+  opacity: 0.2;
   -webkit-filter: blur(3px);
           filter: blur(3px);
 }
@@ -603,56 +603,54 @@ canvas#myChart {
   position: relative;
   left: -50px;
 }
-.loader-xbox,
-.loader-xbox:before,
-.loader-xbox:after {
+.loader {
+  width: 150px;
+  height: 150px;
+  line-height: 150px;
+  margin: 50px auto;
+  position: relative;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  text-align: center;
+  z-index: 1;
+  text-transform: uppercase;
+}
+.loader:before,
+.loader:after {
+  opacity: 0;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  content: "\0020";
   position: absolute;
-  border: 3px solid transparent;
-  border-top: 3px solid white;
-  border-radius: 50%;
-  -webkit-animation: rotate linear infinite;
-          animation: rotate linear infinite;
-  content: '';
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 100px;
+  border: 5px solid #fff;
+  -webkit-box-shadow: 0 0 50px #fff, inset 0 0 50px #fff;
+          box-shadow: 0 0 50px #fff, inset 0 0 50px #fff;
 }
-.loader-xbox {
-  height: 100px;
-  width: 100px;
-  -webkit-animation-duration: 1.05s;
-          animation-duration: 1.05s;
+.loader:after {
+  z-index: 1;
+  -webkit-animation: gogoloader 2s infinite 1s;
 }
-.loader-xbox:before {
-  height: 75px;
-  width: 75px;
-  top: 10px;
-  left: 10px;
-  -webkit-animation-duration: 10s;
-          animation-duration: 10s;
+.loader:before {
+  z-index: 2;
+  -webkit-animation: gogoloader 2s infinite;
 }
-.loader-xbox:after {
-  height: 50px;
-  width: 50px;
-  top: 22px;
-  left: 22px;
-  -webkit-animation-duration: 4s;
-          animation-duration: 4s;
-}
-@-webkit-keyframes rotate {
-  from {
-    -webkit-transform: rotateZ(360deg);
-            transform: rotateZ(360deg);
+@-webkit-keyframes gogoloader {
+  0% {
+    -webkit-transform: scale(0);
+    opacity: 0;
   }
-  to {
-    -webkit-transform: rotateZ(0deg);
-            transform: rotateZ(0deg);
+  50% {
+    opacity: 1;
   }
-}
-@keyframes rotate {
-  from {
-    -webkit-transform: rotateZ(360deg);
-            transform: rotateZ(360deg);
-  }
-  to {
-    -webkit-transform: rotateZ(0deg);
-            transform: rotateZ(0deg);
+  100% {
+    -webkit-transform: scale(1);
+    opacity: 0;
   }
 }
