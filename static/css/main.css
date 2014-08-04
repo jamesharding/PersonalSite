@@ -601,7 +601,6 @@ canvas#myChart {
 .center-loader {
   display: inline-block;
   position: relative;
-  left: -50px;
 }
 .loader {
   width: 150px;
