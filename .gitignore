@@ -2,3 +2,6 @@
 VENV
 Freezer
 codekit-config.json
+.idea
+
+config.codekit
