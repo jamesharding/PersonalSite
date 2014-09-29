@@ -5,4 +5,8 @@ if not yourappname in sys.path:
 
 print "Appended to path"
 
+
+activate_this='/home/jamesharding/venvs/PersonalSiteVenv/bin/activate_this.py'
+execfile(activate_this, dict(__file__=activate_this))
+
 from startup import app as application
