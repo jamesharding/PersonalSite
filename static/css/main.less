@@ -322,31 +322,33 @@ canvas#myChart{
   height: auto !important;
 }
 
-#im_a{
-  position: fixed;
-  bottom: 0px;
+.tv {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
   width: 100%;
-  text-align: center;
-  font-size: 2.5em;
-  font-weight: normal;
-  background-color: white;
-  opacity: 0.9;
-  color: @blue;
-  div.small{
-    font-size: 0.6em;
-    position: relative;
-    margin-top: 0px;
-    color: @darkblue;
-  }
-  a{
-    border-bottom: 2px solid white;
-  }
-  #hello{
-    font-size: 2em;
-  }
-  #noun{
-    top: -10px;
-    padding-bottom: 5px;
+  height: 100%;
+
+  overflow: hidden;
+  
+  .screen {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+
+    margin: auto;
+
+    opacity: 0;
+    transition: opacity .5s;
+
+    &.active {
+      opacity: 1;
+    }
   }
 }
 

@@ -1,17 +1,17 @@
 {% extends "index.html" %}
             {% block title %}Computer Engineer, Pilot, Tech Lover, and Web Developer{% endblock %}
             {% block content %}
-            <div style="position: fixed; z-index: -99; width: 100%; height: 100%; top:0px; left: 0px">
-                <video autoplay="" loop="" class="" data-wow-delay="0.5s" id="" style="position: absolute;
-    left: 0;
-    top: 0;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: 1;" muted>
-            <source src="https://googledrive.com/host/0B_0BhMdNyrTzZklKSkZrY0RlWFk" type="video/mp4">Your browser does not support the video tag. I suggest you upgrade your browser.
-        </video>
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    $('#video').YTPlayer({
+                        fitToBackground: true,
+                        videoId: 'YOMEBgzQNGo'
+                    });
+                });
+            </script>
+
+            <div id="video" style="position: fixed; z-index: -99; width: 100%; height: 100%; top:0px; left: 0px">
+                <!-- <iframe height="100%" width="100%" src="https://www.youtube.com/embed/YOMEBgzQNGo?autoplay=1&controls=0&showinfo=0&autohide=1" frameborder="0" allowfullscreen></iframe> -->
             </div>
 
 
