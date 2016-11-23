@@ -13,11 +13,6 @@ body{
         background-position: 0% 0%;
     }
     background-color: @darkblue;
-    // 90 - 63.5
-    background-image: linear-gradient(-26.5deg, @white 50%, @darkblue 50%);
-    background-position: 50% 50%;
-    background-size:200%;
-    transition: background-position 0.1s;
     height:100%;
     color: #ecf0f1;
     font-family: 'Raleway','Helvetica', sans-serif;
@@ -32,6 +27,8 @@ a{
 
 header{
     text-align: center;
+    z-index: 100;
+    position: relative;
 }
 
 header h1{
@@ -43,7 +40,38 @@ header h1{
     text-shadow: 1px 1px 3px @darkblue;
 }
 
-#hero{
+#aviation, #engineering{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#aviation{
+    background: @white;
+    z-index: 1;
+}
+
+#engineering{
+    background: @darkblue;
+    z-index: 2;
+    transition: clip-path 2s, -webkit-clip-path 2s;
+    -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% 0%);
+    clip-path: polygon(0% 0%, 0% 100%, 100% 0%);
+
+    body.aviation &{
+        -webkit-clip-path: polygon(0 0%, 0% 0%, 0% 0);
+        clip-path: polygon(0 0%, 0% 0%, 0% 0);
+    }
+
+    body.engineering &{
+        -webkit-clip-path: polygon(0 150%, 0% 0%, 300% 0);
+        clip-path: polygon(0 150%, 0% 0%, 300% 0);
+    }
+}
+
+#aviation_hero, #engineering_hero{
     width: 400px;
     height: 400px;
     position: absolute;
@@ -52,28 +80,16 @@ header h1{
     margin-left: -200px;
     margin-top: -200px;
     #jetengine{
-        z-index: 2;
         position: absolute;
         top: 0;
         left: 0;
     }
     #circuit{
-
-        z-index: 3;
-        -webkit-clip-path: polygon(0 75%, 0% 0%, 150% 0);
-        clip-path: polygon(0 75%, 0% 0%, 150% 0);
-        body.engineering > &{
-            -webkit-clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
-            clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0% 100%);
-        }
-        body.aviation > &{
-            -webkit-clip-path: polygon(0 0%);
-            clip-path: polygon(0 0%);
-        }
         position: absolute;
         top: 0;
         left: 0;
     }
+
     #blades{
         animation: turbofan 5s infinite linear;
         transform-origin: 50% 50%;

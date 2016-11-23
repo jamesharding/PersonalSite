@@ -33,36 +33,11 @@
         </div>
     </header>
 
-<!--     <div id="menu">
-        <div class="container">
-            <a href="{{ url_for('home') }}" class="menu-icon" title="Intro Video"><i class="icon-film"></i></a>
-            <a href="{{ url_for('resume') }}" class="menu-icon" title="Resume"><i class="icon-file-text-alt"></i></a>
-            <a href="{{ url_for('aviation') }}" class="menu-icon" title="Pilot"><i class="icon-plane"></i></a>
-            <a href="{{ url_for('engineer') }}" class="menu-icon" title="Engineer"><i class="icon-wrench"></i></a>
-            <a href="{{ url_for('hobbies') }}" class="menu-icon" title="Hobbies"><i class="icon-heart"></i></a>
-            <a href="{{ url_for('projects') }}" class="menu-icon" title="Projects"><i class="icon-code"></i></a>
-            <a href="{{ url_for('workexperience') }}" class="menu-icon" title="Work"><i class="icon-briefcase"></i></a>
-            <a href="{{ url_for('posts') }}" class="menu-icon" title="Posts"><i class="icon-pencil"></i></a>
-        </div>
-    </div> -->
+
 
     <script type="text/javascript">
-        $(document).ready(function(){
-            $('#video').YTPlayer({
-                fitToBackground: true,
-                videoId: 'YOMEBgzQNGo'
-            });
-
-        // var diagonal = Raphael(0,0, "100%", "100%");
-        // diagonal.setViewBox(0,0,100,100,false);
-        // var triangle = diagonal.path("M 0,100 L 100,0 L 0,0");
-        // diagonal.forEach(function(obj){
-        //     obj.attr("fill", "#FFF");
-        //     obj.attr("stroke-width", "0");
-        // });
-
-
-        var jetengine = Raphael(document.getElementById("hero"), '100%', '100%');
+    $(document).ready(function(){
+        var jetengine = Raphael(document.getElementById("aviation_hero"), '100%', '100%');
         jetengine.canvas.setAttribute('id', 'jetengine');
         jetengine.canvas.setAttribute('style', '');
         jetengine.setViewBox(0,0,100,100,true);
@@ -80,7 +55,7 @@
             obj.attr("stroke-width", "0");
         });
 
-        var circuit = Raphael(document.getElementById("hero"), '100%', '100%');
+        var circuit = Raphael(document.getElementById("engineering_hero"), '100%', '100%');
         circuit.canvas.setAttribute('id', 'circuit');
         circuit.canvas.setAttribute('style', '');
         circuit.setViewBox(0,0,100,100,true);
@@ -93,20 +68,17 @@
         });
         diagram.node.id = "diagram";
 
-
-        
-
     });
 </script>
 
-<div id="hero">
+<div id="aviation">
+    <div id="aviation_hero"></div>
 </div>
 
-<div id="loader">
-    <div class="container">
-        <div class="center-loader"><div class="loader">Loading</div></div>
-    </div>
+<div id="engineering">
+    <div id="engineering_hero"></div>
 </div>
+
 
 <div id="content">
     {% block content %}

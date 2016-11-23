@@ -2,22 +2,16 @@ $(document).ready(function(){
 	$('body').addClass('a');
 
 	rebind();
-	
-	$('#loader').hide(0);
 
 });
 
 function rebind(){
-	$('body.engineering h1').click(function(){
-		$('body').removeClass('engineering');
-		$('body').addClass('a');
-		rebind();
+	$('#engineering').click(function(){
+		$('body').toggleClass('engineering');
 	});
 
-	$('body.a h1').click(function(){
-		$('body').removeClass('a');
-		$('body').addClass('aviation');
-		rebind();
+	$('#aviation').click(function(){
+		$('body').toggleClass('aviation');
 	});
 
 	$('body.aviation h1').click(function(){
