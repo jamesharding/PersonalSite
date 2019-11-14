@@ -16,19 +16,19 @@ Before we begin, I recommend having a quick read of the [Flask Documentation](ht
 
 Let's start with our Python dependencies. We are using Flask 0.10.x and Python 2.7
 
-	Flask==0.10.1
-	Flask-FlatPages==0.5
-	Frozen-Flask==0.11
-	Jinja2==2.7.1
-	Markdown==2.3.1
-	MarkupSafe==0.18
-	PyYAML==3.10
-	Pygments==1.6
-	Werkzeug==0.9.3
-	itsdangerous==0.22
-	wsgiref==0.1.2
-
-I will assume that you know a little about [VirtualEnv](http://iamzed.com/2009/05/07/a-primer-on-virtualenv/). If not, you seriously should be using it for all of your Python projects. Drop the above list into a file named requirements.txt and execute `pip install -r requirements.txt` from your shell. You are now ready to start building your blog.
+	Click==7.0
+	Flask==1.1.1
+	Flask-FlatPages==0.7.1
+	Frozen-Flask==0.15
+	itsdangerous==1.1.0
+	Jinja2==2.10.3
+	Markdown==3.1.1
+	MarkupSafe==1.1.1
+	Pygments==2.4.2
+	PyYAML==5.1.2
+	Werkzeug==0.16.0
+	
+I will assume that you know a little about [venv](http://iamzed.com/2009/05/07/a-primer-on-virtualenv/). If not, you seriously should be using it for all of your Python projects. Drop the above list into a file named requirements.txt and execute `pip install -r requirements.txt` from your shell. You are now ready to start building your blog.
 
 ### Folder Structure
 

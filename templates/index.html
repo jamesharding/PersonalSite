@@ -1,100 +1,44 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <title>{% block title %}Page Not Found{% endblock %} - James Harding</title>
-        <meta name="description" content="{% block description %}James Harding: Computer Engineer, Pilot, and Web Developer{% endblock %}">
-        <meta name="viewport" content="width=device-width">
-        <meta name="msvalidate.01" content="DA8F720876BFFC23B8D752BCA20D942B" />
-        <meta name="robots" content="NOODP">
-        
-        <link href='http://fonts.googleapis.com/css?family=Raleway:300,700' rel='stylesheet' type='text/css'>
-        <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-        <link rel="stylesheet" href="/static/css/normalize.css">
-        <link rel="stylesheet" href="/static/css/grid.css">
-        <link rel="stylesheet" href="{{ url_for('pygments_css') }}">
-        <link rel="stylesheet" href="/static/css/main.css">
 
-        <!-- <script src="/static/js/prefixfree.min.js"></script> -->
-        <script src="/static/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script src="/static/js/dynamo.js"></script>
-        <script src="/static/js/Chart.min.js"></script>
-        <script src="/static/js/ytbg.js"></script>
-        <script src="/static/js/main.js"></script>
-    </head>
-    <body>
-        <div id="social">
-            <a href="https://github.com/jamesharding" target="_blank" title="Github"><i class="icon-github"></i></a>
-            <a href="https://twitter.com/james_harding" target="_blank" title="Twitter"><i class="icon-twitter"></i></a>
-            <a href="http://ca.linkedin.com/in/jamesdavidharding" target="_blank" title="LinkedIn"><i class="icon-linkedin"></i></a>
-            <a href="https://www.facebook.com/jamesharding" target="_blank" title="Facebook"><i class="icon-facebook"></i></a>
-            <a href="https://plus.google.com/104295715538786922883" rel="author" target="_blank" title="Google+"><i class="icon-google-plus"></i></a>
+<head>
+  <meta charset="utf-8">
+  <title>{% block title %}Page Not Found{% endblock %} - James Harding</title>
+  <meta name="description"
+    content="{% block description %}James Harding: Computer Engineer, Pilot, and Web Developer{% endblock %}">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Open+Sans|Roboto:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/normalize-min.css">
+  <link rel="stylesheet" href="/static/css/skeleton.css">
+  <link rel="stylesheet" href="{{ url_for('pygments_css') }}">
+  <link rel="stylesheet" href="/static/css/main.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/typeit@6.1.1/dist/typeit.min.js"></script>
+</head>
+
+<body>
+  <div class="contentblock {% if bigheader %}fullheight{% endif %}">
+    <div class="contentblock_vcentre">
+      <div class="container">
+        <div class="row">
+          <div class="column">
+            <h1>Hi, my name is <b>James Harding</b>.</h1>
+            <h2>I am an <a href="{{ url_for('home') }}#pilot">Airline Pilot</a> / <a href="{{ url_for('home') }}#engineer">Computer Engineer</a>.</h2>
+            <h3>I <i>very very</i> occasionally <a href="{{ url_for('home') }}#writing">write things</a> and make videos.</h3>
+          </div>
         </div>
-        <header>
-            <div class="container">
-                <h1>James Harding</h1>
-            </div>
-        </header>
+      </div>
+    </div>
+  </div>
+  {% block content %}
 
-        <div id="menu">
+  {% endblock %}
+  <!-- <div id="menu">
             <div class="container">
                 <a href="{{ url_for('home') }}" class="menu-icon" title="Intro Video"><i class="icon-film"></i></a>
-                <a href="{{ url_for('resume') }}" class="menu-icon" title="Resume"><i class="icon-file-text-alt"></i></a>
-                <a href="{{ url_for('aviation') }}" class="menu-icon" title="Pilot"><i class="icon-plane"></i></a>
-                <a href="{{ url_for('engineer') }}" class="menu-icon" title="Engineer"><i class="icon-wrench"></i></a>
-                <a href="{{ url_for('hobbies') }}" class="menu-icon" title="Hobbies"><i class="icon-heart"></i></a>
-                <a href="{{ url_for('projects') }}" class="menu-icon" title="Projects"><i class="icon-code"></i></a>
-                <a href="{{ url_for('workexperience') }}" class="menu-icon" title="Work"><i class="icon-briefcase"></i></a>
-                <a href="{{ url_for('posts') }}" class="menu-icon" title="Posts"><i class="icon-pencil"></i></a>
             </div>
-        </div>
+        </div> -->
 
-        <div id="loader">
-            <div class="container">
-                <div class="center-loader"><div class="loader">Loading</div></div>
-            </div>
-        </div>
-        
-        <div id="content">
-            {% block content %}
-            <div class="title">
-                <h2>Page Not Found!</h2>
-            </div>
-            {% endblock %}
-        </div>
+</body>
 
-        <!-- Piwik -->
-        <script type="text/javascript">
-          var _paq = _paq || [];
-          _paq.push(["trackPageView"]);
-          _paq.push(["enableLinkTracking"]);
-
-          (function() {
-            var u=(("https:" == document.location.protocol) ? "https" : "http") + "://webstats.jamesharding.ca/";
-            _paq.push(["setTrackerUrl", u+"piwik.php"]);
-            _paq.push(["setSiteId", "7"]);
-            var d=document, g=d.createElement("script"), s=d.getElementsByTagName("script")[0]; g.type="text/javascript";
-            g.defer=true; g.async=true; g.src=u+"piwik.js"; s.parentNode.insertBefore(g,s);
-          })();
-        </script>
-        <!-- End Piwik Code -->
-        <script type="text/javascript">
-
-          var _gaq = _gaq || [];
-          _gaq.push(['_setAccount', 'UA-8439586-1']);
-          _gaq.push(['_setDomainName', 'jamesharding.ca']);
-          _gaq.push(['_trackPageview']);
-
-          (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-          })();
-
-        </script>
-    </body>
 </html>

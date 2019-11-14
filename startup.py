@@ -5,7 +5,7 @@ from datetime import date
 from flask_flatpages import FlatPages, pygments_style_defs
 from flask_frozen import Freezer
 
-BASE_URL = 'http://www.jamesharding.ca'
+BASE_URL = 'https://www.jamesharding.ca'
 DEBUG = True
 FLATPAGES_AUTO_RELOAD = DEBUG
 FLATPAGES_EXTENSION = '.md'
@@ -24,45 +24,13 @@ def inject_ga():
 
 @app.route('/pygments.css')
 def pygments_css():
-    return pygments_style_defs('monokai'), 200, {'Content-Type': 'text/css'}
+    return pygments_style_defs('solarized-dark'), 200, {'Content-Type': 'text/css'}
 
 @app.route("/")
 def home():
-    return render_template('home.html')
-
-@app.route("/fathersday/")
-def fathersday():
-    return render_template('fathersday.html')
-
-@app.route("/engineer/")
-def engineer():
-    return render_template('engineer.html')
-
-@app.route("/pilot/")
-def aviation():
-    return render_template('pilot.html')
-
-@app.route("/hobbies/")
-def hobbies():
-    return render_template('hobbies.html')
-
-@app.route("/projects/")
-def projects():
-    return render_template('projects.html')
-
-@app.route("/resume/")
-def resume():
-    return render_template('resume.html')
-
-@app.route("/work-experience/")
-def workexperience():
-    return render_template('workexperience.html')
-
-@app.route("/posts/")
-def posts():
     posts = [p for p in flatpages if p.path.startswith(POST_DIR)]
     posts.sort(key=lambda item: item['date'], reverse=True)
-    return render_template('posts.html', posts=posts)
+    return render_template('home.html', posts=posts, bigheader=True)
 
 @app.route('/posts/<name>/')
 def post(name):
