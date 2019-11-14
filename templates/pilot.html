@@ -1,0 +1,28 @@
+{% extends "index.html" %}
+            {% block title %}Pilot{% endblock %}
+            {% block description %}As a Pilot and Flight Instructor, aviation is a huge part of my life.{% endblock %}
+            {% block content %}
+            <div class="title">
+                <h2>I'm A Commercial Pilot</h2>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="one-third column card alpha">
+                        <p>I <s>quite enjoy</s> <b>LOVE</b> flying airplanes. I currently hold my <b>A320 type rating</b>, <b>Commercial Pilot License</b> and <b>Glider Pilot Instructor Rating</b>.</p>
+                        <p>Professionally, I work as an A320 First Officer for <b>British Airways</b>, but I also enjoy light aircraft flying and instructing in the Canadian Air Cadet program.</p>
+                    </div>
+                    <div class="two-thirds column card omega">
+                        <p><img width="100%" src="{{ url_for('static', filename='img/flying.jpg') }}"</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="two-thirds column card alpha">
+                        <p><iframe src="http://player.vimeo.com/video/49050544?portrait=0" width="100%" height="350" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe></p>
+                    </div>
+                    <div class="one-third column card omega">
+                        <p>I have also received the accolades of <b>Top Overall Glider Pilot</b> in 2009 while at CRGS and <b>Top Overall Power Pilot</b> at Durham Flying Centre in 2010, also through the Royal Canadian Air Cadet program.</p>
+                        <p>I was honoured to have been selected as part of British Airways' <b>Future Pilot Programme</b> which commenced in June 2014.</p>
+                    </div>
+                </div>
+            </div>
+            {% endblock %}

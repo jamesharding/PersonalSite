@@ -1,63 +1,14 @@
 {% extends "index.html" %}
 {% block title %}Computer Engineer, Pilot, Tech Lover, and Web Developer{% endblock %}
 {% block content %}
-<div class="contentblock fullheight pilot">
-  <a id="pilot"></a>
-  <div class="contentblock_vcentre">
-    <div class="container">
-      <div class="row">
-        <div class="column">
-          <h2>I am a first officer at <b>British Airways</b>.</h2>
-          <p>Holding a A320 type rating and an ATPL license.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="contentblock fullheight engineer">
-  <a id="engineer"></a>
-  <div class="contentblock_vcentre">
-    <div class="container">
-      <div class="row">
-        <div class="column">
-          <script type="text/javascript">
-            document.addEventListener('DOMContentLoaded', function (event) {
-              new TypeIt('.engineer h2', {
-                speed: 70,
-                breakLines: false,
-                waitUntilVisible: true
-              }).go();
-            })
-          </script>
-          <p class="engineertitle"></p>
-          <h2>> I am a <b>Computer Engineer</b></h2>
-          <p>My day-to-day programming consists of entering a route into an A320 FMGC.</p>
-          <p>I also know the imporance of turning stuff off and on again when it doesnt work.
-            <b>#A320resets</b></p>
-          <p>Looking to hire somebody for a full-stack project?</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="contentblock writing">
-  <a id="writing"></a>
-  <div class="contentblock">
-    <div class="container">
-      <div class="row">
-        <div class="column">
-          <h2>Things that I have written...</h2>
-          {% for post in posts %}
-          <p>
-            <a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}" class="internal">
-              {{ post.title }}
-            </a><br>
-            <small>{{ post.date }}</small>
-          </p>
-          {% endfor %}
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+
+
+<!--
+<div id="video" style="position: fixed; z-index: -99; width: 100%; height: 100%; top:0px; left: 0px">
+    <iframe height="100%" width="100%" src="https://www.youtube.com/embed/YOMEBgzQNGo?autoplay=1&controls=0&showinfo=0&autohide=1" frameborder="0" allowfullscreen></iframe>
+</div> -->
+
+
+
+
 {% endblock %}
