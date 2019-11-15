@@ -3,5 +3,5 @@ VENV
 Freezer
 codekit-config.json
 .idea
-
 config.codekit3
+.DS_Store
