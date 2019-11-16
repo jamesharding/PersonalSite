@@ -15,14 +15,27 @@ h1.title {
 h1.title span.title_lt {
   color: #2A558C;
 }
-@media (max-width: 1150px) {
+@media (max-width: 1000px) {
   h1.title {
-    font-size: 1em;
+    font-size: 1.3em;
+    text-align: center;
+  }
+}
+@media (max-width: 550px) {
+  h1.title {
+    font-size: 1.3em;
+    text-align: center;
+    margin: 8px;
   }
 }
 h2 {
   font-size: 3em;
   font-weight: 300;
+}
+@media (max-width: 1000px) {
+  h2 {
+    font-size: 2em;
+  }
 }
 h3 {
   font-size: 1.2em;
@@ -44,28 +57,31 @@ header {
   top: 0px;
   left: 0px;
   width: 100%;
-  height: 65px;
   z-index: 3;
   transition: transform 0.55s ease-in-out;
 }
 header.headroom--unpinned {
   /* display: none; */
-  transform: translateY(-100px);
+  transform: translateY(-200px);
 }
 header.headroom--pinned {
   /* display: block; */
   transform: translateY(0);
 }
 header nav {
-  position: absolute;
   display: block;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 0px;
+  text-align: center;
 }
 header nav ul {
   margin: 20px;
   padding: 0;
+  display: block;
+}
+@media (max-width: 550px) {
+  header nav ul {
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
 }
 header nav ul li {
   display: inline-block;
@@ -82,8 +98,23 @@ header nav ul li a {
   text-decoration: none;
   font-size: 1.2em;
 }
+@media (max-width: 1000px) {
+  header nav ul li a {
+    font-size: 1em;
+  }
+}
+@media (max-width: 550px) {
+  header nav ul li a {
+    font-size: 0.8em;
+  }
+}
 div.contentblock p {
-  font-size: 1.3em;
+  font-size: 1.2em;
+}
+@media (max-width: 1000px) {
+  div.contentblock p {
+    font-size: 1em;
+  }
 }
 div.contentblock.first_block {
   margin-top: 100px;
@@ -99,9 +130,9 @@ div.contentblock.intro h2 {
   font-size: 4em;
   font-weight: 300;
 }
-@media (max-width: 1150px) {
+@media (max-width: 1000px) {
   div.contentblock.intro h2 {
-    font-size: 2.5em;
+    font-size: 2em;
   }
 }
 div.contentblock.intro h2 b {

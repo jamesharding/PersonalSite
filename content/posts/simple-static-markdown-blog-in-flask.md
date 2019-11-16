@@ -1,5 +1,5 @@
 title: Build a Simple, Static, Markdown-Powered Blog with Flask
-date: 2013-08-27
+date: 2019-11-16
 description: A short tutorial explaining how to set up a static Markdown blog in Flask in just a few lines of Python.
 tags: programming
 
