@@ -54,6 +54,7 @@ header.headroom--unpinned {
 }
 header.headroom--pinned {
   /* display: block; */
+  transform: translateY(0);
 }
 header nav {
   position: absolute;
