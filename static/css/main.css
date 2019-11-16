@@ -1,2 +1,196 @@
-html{height:100%}body{background-color:#111;color:#ecf0f1;font-family:Roboto,sans-serif;height:100%}h1{font-size:3em}h2{font-size:2em}h3{font-size:1.5em}a{color:#fff;text-decoration:underline}div.contentblock{padding:30px}div.contentblock.fullheight{height:100%}div.contentblock.pilot{background:url(/static/img/cockpit_night.png);background-size:cover}div.contentblock.engineer{color:#41FF00;background-color:#000;font-family:'IBM Plex Mono',monospace;text-shadow:0 0 4px #41FF00}div.contentblock.post .container{background-color:#ecf0f1;color:#111;padding:50px}div.contentblock.fullheight div.contentblock_vcentre{position:relative;top:50%;-webkit-transform:translateY(-50%);transform:translateY(-50%)}.blinking-cursor{-webkit-animation:1s blink step-end infinite;animation:1s blink step-end infinite}@-webkit-keyframes blink{from,to{opacity:1}50%{opacity:0}}@keyframes blink{from,to{opacity:1}50%{opacity:0}}.post{font-size:1em;line-height:1.45}.post p{padding:15px 0 15px 0;margin:0}.post p:first-child{padding-top:30px}.post p:last-child{padding-bottom:30px}.post h2{text-transform:uppercase;font-size:2.5em;text-align:center;border-bottom:2px solid;padding:0;margin:0;clear:both}.post h3{text-transform:uppercase;border-bottom:2px solid;padding:0;margin:40px 0 0 0;clear:both}.post img{max-width:100%;display:block;margin-left:auto;margin-right:auto}.post div.fw-image{width:100%}.post div.fw-image span.caption{display:block;text-align:center;font-size:.8em}.post div.hw-image-left{width:40%;float:left;margin:30px}.post div.hw-image-left span.caption{display:block;text-align:center;font-size:.8em}.post div.hw-image-right{width:40%;float:right;margin:30px}.post div.hw-image-right span.caption{display:block;text-align:center;font-size:.8em}.post div.codehilite{padding:1px 20px 1px 20px;font-size:18px}.post pre{white-space:pre-wrap}.post a{color:#111}.post ul{margin:0 20px 0 20px}.post ol{margin:0 20px 0 20px}
-/*# sourceMappingURL=main.css.map */
+html {
+  height: 100%;
+}
+body {
+  background-color: #111111;
+  color: #ecf0f1;
+  font-family: 'Roboto', sans-serif;
+  height: 100%;
+}
+h1.title {
+  margin: 15px;
+  font-size: 2em;
+}
+h1.title span.title_lt {
+  color: #2A558C;
+}
+h2 {
+  font-size: 1.8em;
+}
+h3 {
+  font-size: 1.2em;
+}
+h4 {
+  font-size: 1.1em;
+}
+a {
+  color: white;
+  text-decoration: underline;
+}
+header {
+  background-color: #ecf0f1;
+  color: #111111;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 65px;
+  z-index: 3;
+  transition: transform 0.25s ease-in-out;
+}
+header.headroom--unpinned {
+  /* display: none; */
+  transform: translateY(-65px);
+}
+header.headroom--pinned {
+  /* display: block; */
+  transform: translateY(0);
+}
+header nav {
+  position: absolute;
+  display: block;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0px;
+}
+header nav ul {
+  margin: 20px;
+  padding: 0;
+}
+header nav ul li {
+  display: inline-block;
+  list-style-type: none;
+}
+header nav ul li a {
+  color: #1B3059;
+  display: block;
+  padding: 0 24px;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+header nav ul li a.active,
+header nav ul li a:hover {
+  text-decoration: underline #2A558C;
+}
+div.contentblock {
+  padding: 30px;
+}
+div.contentblock.first_block {
+  margin-top: 70px;
+}
+div.contentblock.fullheight {
+  height: 100%;
+}
+div.contentblock.pilot {
+  background: url('/static/img/cockpit_night.png');
+  background-size: cover;
+}
+div.contentblock.engineer {
+  color: #41FF00;
+  background-color: #000000;
+  font-family: 'IBM Plex Mono', monospace;
+  text-shadow: 0px 0px 4px #41FF00;
+}
+div.contentblock.post .container {
+  background-color: #ecf0f1;
+  color: #111111;
+  padding: 50px;
+}
+div.contentblock.fullheight div.contentblock_vcentre {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.blinking-cursor {
+  animation: 1s blink step-end infinite;
+}
+@keyframes "blink" {
+  from,
+  to {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+/*Blog post styling*/
+.post {
+  font-size: 1em;
+  line-height: 1.45;
+}
+.post p {
+  padding: 15px 0px 15px 0px;
+  margin: 0px;
+}
+.post p:first-child {
+  padding-top: 30px;
+}
+.post p:last-child {
+  padding-bottom: 30px;
+}
+.post h2 {
+  text-transform: uppercase;
+  font-size: 2.5em;
+  text-align: center;
+  border-bottom: 2px solid;
+  padding: 0px;
+  margin: 0px;
+  clear: both;
+}
+.post h3 {
+  text-transform: uppercase;
+  border-bottom: 2px solid;
+  padding: 0px 0px 0px 0px;
+  margin: 40px 0px 0px 0px;
+  clear: both;
+}
+.post img {
+  max-width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.post div.fw-image {
+  width: 100%;
+}
+.post div.fw-image span.caption {
+  display: block;
+  text-align: center;
+  font-size: 0.8em;
+}
+.post div.hw-image-left {
+  width: 40%;
+  float: left;
+  margin: 30px;
+}
+.post div.hw-image-left span.caption {
+  display: block;
+  text-align: center;
+  font-size: 0.8em;
+}
+.post div.hw-image-right {
+  width: 40%;
+  float: right;
+  margin: 30px;
+}
+.post div.hw-image-right span.caption {
+  display: block;
+  text-align: center;
+  font-size: 0.8em;
+}
+.post div.codehilite {
+  padding: 1px 20px 1px 20px;
+  font-size: 18px;
+}
+.post pre {
+  white-space: pre-wrap;
+}
+.post a {
+  color: #111111;
+}
+.post ul {
+  margin: 0px 20px 0px 20px;
+}
+.post ol {
+  margin: 0px 20px 0px 20px;
+}

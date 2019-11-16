@@ -1,6 +1,10 @@
-@blue: #0B1226;
+@blue: @blue3;
 @darkgrey: #111111;
 @white: #ecf0f1;
+
+@blue1: #0B1226;
+@blue2: #1B3059;
+@blue3: #2A558C;
 
 html{
   height: 100%;
@@ -14,22 +18,78 @@ body{
 }
 
 // Text
-h1{
-  font-size: 3em;
+h1.title{
+  margin: 15px;
+  font-size: 2em;
+  span.title_lt{
+    color: @blue;
+  }
 }
 h2{
-  font-size: 2em;
+  font-size: 1.8em;
 }
 h3{
-  font-size: 1.5em;
+  font-size: 1.2em;
+}
+h4{
+  font-size: 1.1em;
 }
 a{
   color: white;
   text-decoration: underline;
 }
 
+header{
+  background-color: @white;
+  color: @darkgrey;
+  position: fixed;
+  top:0px;
+  left: 0px;
+  width: 100%;
+  height: 65px;
+  z-index: 3;
+  transition: transform 0.25s ease-in-out;
+  &.headroom--unpinned{
+    /* display: none; */
+    transform: translateY(-65px);
+  }
+  &.headroom--pinned{
+    /* display: block; */
+    transform: translateY(0);
+  }
+  nav {
+    position: absolute; 
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0px;
+    ul {
+      margin: 20px;
+      padding: 0;
+      li {
+        display: inline-block;
+        list-style-type: none;
+        a {
+          color: @blue2;
+          display: block;
+          padding: 0 24px;
+          text-decoration: none;
+          font-size: 1.2em;
+        }
+        a.active, a:hover {
+          text-decoration: underline @blue;
+        }
+      }
+    }
+  }
+}
+
 div.contentblock{
   padding: 30px;
+
+  &.first_block{
+    margin-top: 70px;
+  }
 
   &.fullheight{
     height: 100%;
