@@ -48,7 +48,10 @@ b {
 }
 a {
   color: inherit;
-  text-decoration: none;
+  text-decoration: underline;
+}
+.center {
+  text-align: center;
 }
 header {
   background-color: #ecf0f1;
@@ -150,16 +153,28 @@ div.contentblock.engineer {
   text-shadow: 0px 0px 4px #41FF00;
 }
 div.contentblock.posts {
+  background: #2A558C;
+  color: #ecf0f1;
+}
+div.contentblock.posts a {
+  text-decoration: underline;
+}
+div.contentblock.connect {
   background: #ecf0f1;
   color: #111111;
 }
-div.contentblock.posts a {
+div.contentblock.connect a {
   text-decoration: underline;
 }
 div.contentblock.post .container {
   background-color: #ecf0f1;
   color: #111111;
   padding: 50px;
+}
+@media (max-width: 550px) {
+  div.contentblock.post .container {
+    padding: 10px;
+  }
 }
 div.contentblock div.contentblock_vcentre {
   position: relative;
@@ -189,6 +204,11 @@ div.contentblock div.contentblock_vcentre {
   padding: 0px;
   margin: 0px;
   clear: both;
+}
+@media (max-width: 1000px) {
+  .post h2 {
+    font-size: 1.7em;
+  }
 }
 .post h3 {
   text-transform: uppercase;
@@ -233,7 +253,6 @@ div.contentblock div.contentblock_vcentre {
 }
 .post div.codehilite {
   padding: 1px 20px 1px 20px;
-  font-size: 18px;
 }
 .post pre {
   white-space: pre-wrap;

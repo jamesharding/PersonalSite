@@ -44,7 +44,10 @@ b{
 }
 a{
   color: inherit;
-  text-decoration: none;
+  text-decoration: underline;
+}
+.center{
+  text-align: center;
 }
 
 header{
@@ -136,6 +139,14 @@ div.contentblock{
   }
 
   &.posts{
+    background: @blue;
+    color: @white;
+    a{
+      text-decoration: underline;
+    }
+  }
+
+  &.connect{
     background: @white;
     color: @darkgrey;
     a{
@@ -147,6 +158,7 @@ div.contentblock{
     background-color: @white;
     color: @darkgrey;
     padding: 50px;
+    @media (max-width: 550px) {padding: 10px;}
   }
 
   div.contentblock_vcentre{
@@ -179,6 +191,7 @@ div.contentblock{
     padding:0px;
     margin:0px;
     clear: both;
+    @media (max-width: 1000px) {font-size: 1.7em;}
   }
   h3{
     text-transform: uppercase;
@@ -223,7 +236,6 @@ div.contentblock{
   }
   div.codehilite{
     padding: 1px 20px 1px 20px;
-    font-size: 18px;
   }
 
   pre{

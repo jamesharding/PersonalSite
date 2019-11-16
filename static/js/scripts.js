@@ -2,13 +2,11 @@ window.onload = function () {
   new fullpage('#fullpage', {
     //options here
     autoScrolling:true,
-    scrollHorizontally: true,
     licenseKey: 'asd',
     navigation: true,
     navigationPosition: 'right',
-    anchors: ['intro', 'pilot', 'engineer', 'posts'],
+    anchors: ['intro', 'pilot', 'engineer', 'posts', 'connect'],
     menu: '#fp-menu',
-    fixedElements: '#header',
     verticalCentered: false,
   });
   

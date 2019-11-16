@@ -7,7 +7,7 @@
       <div class="container">
         <div class="row">
           <div class="column">
-            <h2>Hi, I'm <b>James Harding</b>. <br>I am an airline pilot 👨‍✈️ and computer engineer 👨‍💻 based in London 🇬🇧.</h2>
+            <h2>Oh hey! I'm <b>James Harding</b>.<br>Currently relocating large aluminium tubes 👨‍✈️ and writing code 👨‍💻 in London, UK 🇬🇧.</h2>
           </div>
         </div>
       </div>
@@ -53,10 +53,9 @@
               })
             </script>
             <h2>><span id="type">I am a <b>Computer Engineer</b></span></h2>
-            <p>My day-to-day programming consists of entering a route into an A320 FMGC.</p>
-            <p>I also know the imporance of turning stuff off and on again when it doesnt work.
-              <b>#A320resets</b></p>
-            <p>Looking to hire somebody for a full-stack project?</p>
+            <p>My favourite languages at the moment are Python and Javascript, though I also know C, C++, and Java.</p>
+            <p>I have experience building full-stack systems including APIs and mobile apps.</p>
+            <p>Looking to hire somebody for tech consultation? <a href="#connect">Contact me!</a></p>
           </div>
         </div>
       </div>
@@ -67,7 +66,7 @@
       <div class="container">
         <div class="row">
           <div class="column">
-            <h2>Things that I have written...</h2>
+            <h2>Some writing...</h2>
             {% for post in posts %}
             <p>
               <a href="{{ url_for('post', name=post.path.replace('posts/', '')) }}" class="internal">
@@ -81,5 +80,20 @@
       </div>
     </div>
   </div>
+  <div class="contentblock connect section">
+      <div class="contentblock_vcentre">
+        <div class="container">
+          <div class="row">
+            <div class="column center">
+              <h2>Get in Touch</h2>
+              <p>james@jamesharding.ca</p>
+              <p><a href="https://www.linkedin.com/in/jamesdavidharding/">LinkedIn</a></p>
+              <p><a href="https://github.com/jamesharding">GitHub</a></p>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 </div>
 {% endblock %}
