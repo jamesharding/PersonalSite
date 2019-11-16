@@ -17,7 +17,7 @@
     <div class="contentblock_vcentre">
       <div class="container">
         <div class="row">
-          <div class="column">
+          <div class="twelve columns">
             <h2>I am a first officer at <b>British Airways</b>.</h2>
             <p>I have been flying since the age of 16 when I received my Glider Pilot License in Canada.</p>
             <p>I currently hold my ATPL, glider instructor rating, and a type rating on the A320 family of aircraft.</p>
@@ -30,12 +30,18 @@
         </div>
       </div>
     </div>
+    <div id="pilot_video">
+      <div id="pilot_video_darker"></div>
+      <video poster="/static/img/cockpit_night.png" muted loop data-autoplay>
+          <source src="/static/video/pilotbg.mp4" type="video/mp4">
+      </video>
+    </div>
   </div>
   <div class="contentblock engineer section">
     <div class="contentblock_vcentre">
       <div class="container">
         <div class="row">
-          <div class="column">
+          <div class="twelve columns">
             <script type="text/javascript">
               document.addEventListener('DOMContentLoaded', function (event) {
                 new TypeIt('.engineer h2 span#type', {
@@ -65,7 +71,7 @@
     <div class="contentblock_vcentre">
       <div class="container">
         <div class="row">
-          <div class="column">
+          <div class="twelve columns">
             <h2>Some writing...</h2>
             {% for post in posts %}
             <p>
@@ -84,7 +90,7 @@
       <div class="contentblock_vcentre">
         <div class="container">
           <div class="row">
-            <div class="column center">
+            <div class="twelve columns center">
               <h2>Get in Touch</h2>
               <p>james@jamesharding.ca</p>
               <p><a href="https://www.linkedin.com/in/jamesdavidharding/">LinkedIn</a></p>

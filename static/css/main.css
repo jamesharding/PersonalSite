@@ -142,9 +142,47 @@ div.contentblock.intro h2 b {
   color: #2A558C;
   font-weight: 600;
 }
-div.contentblock.pilot {
-  background: url('/static/img/cockpit_night.png');
-  background-size: cover;
+div.contentblock.pilot div#pilot_video {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+  z-index: -1;
+}
+div.contentblock.pilot div#pilot_video div#pilot_video_darker {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.9;
+}
+@media (max-width: 550px) {
+  div.contentblock.pilot div#pilot_video {
+    background: black;
+    opacity: 0.1;
+  }
+}
+div.contentblock.pilot div#pilot_video video {
+  object-fit: cover;
+}
+@media (min-aspect-ratio: 16/9) {
+  div.contentblock.pilot div#pilot_video video {
+    width: 100%;
+    height: auto;
+  }
+}
+@media (max-aspect-ratio: 16/9) {
+  div.contentblock.pilot div#pilot_video video {
+    width: auto;
+    height: 100%;
+  }
+}
+@media (max-width: 550px) {
+  div.contentblock.pilot div#pilot_video video {
+    display: none;
+  }
 }
 div.contentblock.engineer {
   color: #41FF00;
