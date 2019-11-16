@@ -295,7 +295,6 @@ div.contentblock div.contentblock_vcentre {
 }
 .post pre {
   white-space: pre-wrap;
-  overflow: scroll;
 }
 .post code {
   background-color: #ddd;
