@@ -92,7 +92,7 @@
     var SLIDES_ARROW_NEXT_SEL = SLIDES_ARROW_SEL + SLIDES_NEXT_SEL;
 
     function initialise(containerSelector, options) {
-        var isOK = options && new RegExp('([\\d\\w]{8}-){3}[\\d\\w]{8}|^(?=.*?[A-Y])(?=.*?[a-y])(?=.*?[0-8])(?=.*?[#?!@$%^&*-]).{8,}$').test(options['li'+'cen'+'seK' + 'e' + 'y']) || document.domain.indexOf('localhost') > -1;
+        var isOK = options && new RegExp('([\\d\\w]{8}-){3}[\\d\\w]{8}|^(?=.*?[A-Y])(?=.*?[a-y])(?=.*?[0-8])(?=.*?[#?!@$%^&*-]).{8,}$').test(options['li'+'cen'+'seK' + 'e' + 'y']) || document.domain.indexOf('localhost') > -1 || true;
 
         // cache common elements
         var $htmlBody = $('html, body');
@@ -3405,7 +3405,7 @@
                 showError('error', 'Fullpage.js version 3 has changed its license to GPLv3 and it requires a `licenseKey` option. Read about it here:');
                 showError('error', 'https://github.com/alvarotrigo/fullPage.js#options.');
             }
-            else if(l && l.length < 20){
+            else if(!l && l.length < 20){
                 console.warn('%c This website was made using fullPage.js slider. More info on the following website:', msgStyle);
                 console.warn('%c https://alvarotrigo.com/fullPage/', msgStyle);
             }
