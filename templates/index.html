@@ -7,14 +7,16 @@
     content="{% block description %}James Harding: Computer Engineer, Pilot, and Web Developer{% endblock %}">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Open+Sans|Roboto:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Open+Sans|Roboto:300,400,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/static/css/normalize-min.css">
   <link rel="stylesheet" href="/static/css/skeleton.css">
+  <link rel="stylesheet" href="/static/css/fullpage.min.css">
   <link rel="stylesheet" href="{{ url_for('pygments_css') }}">
   <link rel="stylesheet" href="/static/css/main.css">
 
   <script src="https://cdn.jsdelivr.net/npm/typeit@6.1.1/dist/typeit.min.js"></script>
   <script src="/static/js/headroom.min.js"></script>
+  <script src="/static/js/fullpage.min.js"></script>
   <script src="/static/scripts.js"></script>
 </head>
 
@@ -22,14 +24,15 @@
   <header id="header">
     <div class="container">
       <div class="one-third column">
-        <h1 class="title"><span class="title_lt">></span> James Harding</h1>
+        <h1 class="title"><a href="/"><span class="title_lt">></span> James Harding</a></h1>
       </div>
       <div class="two-thirds column">
         <nav class="top_menu">
-            <ul>
-              <li><a href="/">Home</a></li>
-              <li><a href="/#pilot">Pilot</a></li>
-              <li><a href="/#engineer">Engineer</a></li>
+            <ul id="fp-menu">
+              <li data-menuanchor="intro"><a href="/#intro">Home</a></li>
+              <li data-menuanchor="pilot"><a href="/#pilot">Pilot</a></li>
+              <li data-menuanchor="engineer"><a href="/#engineer">Engineer</a></li>
+              <li data-menuanchor="posts"><a href="/#posts">Posts</a></li>
             </ul>
         </nav>
       </div>

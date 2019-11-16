@@ -1,1 +1,1 @@
-window.onload=function(){var e=document.querySelector("header#header"),o;new Headroom(e).init()};
+window.onload=function(){new fullpage("#fullpage",{autoScrolling:!1,scrollHorizontally:!0,licenseKey:"asd",navigation:!0,navigationPosition:"right",anchors:["intro","pilot","engineer","posts"],menu:"#fp-menu",verticalCentered:!1});var e=document.querySelector("header#header"),n;new Headroom(e).init()};
