@@ -184,7 +184,8 @@ div.contentblock.pilot div#pilot_video video {
     display: none;
   }
 }
-div.contentblock.engineer {
+div.contentblock.engineer,
+div.contentblock.fourohfour {
   color: #41FF00;
   background-color: #000000;
   font-family: 'IBM Plex Mono', monospace;

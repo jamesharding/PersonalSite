@@ -1,9 +1,10 @@
 import sys
 from flask import Flask
-from flask import render_template, request
+from flask import render_template, request, redirect
 from datetime import date
 from flask_flatpages import FlatPages, pygments_style_defs
 from flask_frozen import Freezer
+from urllib.parse import urlparse, urlunparse
 
 BASE_URL = 'https://www.jamesharding.ca'
 DEBUG = True
@@ -17,6 +18,15 @@ flatpages = FlatPages(app)
 freezer = Freezer(app)
 
 app.config.from_object(__name__)
+
+@app.before_request
+def redirect_nonwww():
+    """Redirect non-www requests to www."""
+    urlparts = urlparse(request.url)
+    if urlparts.netloc == 'jamesharding.ca':
+        urlparts_list = list(urlparts)
+        urlparts_list[1] = 'www.jamesharding.ca'
+        return redirect(urlunparse(urlparts_list), code=301)
 
 @app.context_processor
 def inject_ga():

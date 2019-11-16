@@ -41,13 +41,39 @@
     
   </header>
   {% block content %}
+  <div id="fullpage">
+  <div class="contentblock fourohfour section">
+      <div class="contentblock_vcentre">
+        <div class="container">
+          <div class="row">
+            <div class="twelve columns">
+              <script type="text/javascript">
+                document.addEventListener('DOMContentLoaded', function (event) {
+                  new TypeIt('.fourohfour h2 span#type', {
+                    speed: 70,
+                    breakLines: false,
+                    waitUntilVisible: true,
+                    loop: true,
+                    lifeLike: true,
+                    loopDelay: [500, 4000],
+                    nextStringDelay: [4000, 500],
+                    startDelay:2000,
+                    strings:[
+                    ]
+                  }).go();
+                })
+              </script>
+              <h2>><span id="type">404 Page Not Found</h2>
+              <p>Whoop. Looks like that link is broken. Maybe try one of the links up above?</p>
+              <p>Or you could just click here: <a href="/">CLICK ME!</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
   
   {% endblock %}
-  <!-- <div id="menu">
-            <div class="container">
-                <a href="{{ url_for('home') }}" class="menu-icon" title="Intro Video"><i class="icon-film"></i></a>
-            </div>
-        </div> -->
 
 </body>
 
