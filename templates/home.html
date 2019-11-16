@@ -1,5 +1,5 @@
 {% extends "index.html" %}
-{% block title %}Computer Engineer, Pilot, Tech Lover, and Web Developer{% endblock %}
+{% block title %}Airline Pilot and Computer Engineer{% endblock %}
 {% block content %}
 <div id="fullpage">
   <div class="contentblock intro section">
@@ -7,7 +7,7 @@
       <div class="container">
         <div class="row">
           <div class="column">
-            <h2>Hi, I'm <b>James Harding</b>. <br>Airline pilot 👨‍✈️ and computer engineer 👨‍💻 based in London 🇬🇧.</h2>
+            <h2>Hi, I'm <b>James Harding</b>. <br>I am an airline pilot 👨‍✈️ <br>and computer engineer 👨‍💻 <br>based in London 🇬🇧.</h2>
           </div>
         </div>
       </div>
@@ -21,7 +21,11 @@
             <h2>I am a first officer at <b>British Airways</b>.</h2>
             <p>I have been flying since the age of 16 when I received my Glider Pilot License in Canada.</p>
             <p>I currently hold my ATPL, glider instructor rating, and a type rating on the A320 family of aircraft.</p>
-            <p style="text-align: center;"><iframe width="560" height="315" src="https://www.youtube.com/embed/LDayOjSXPPI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+            <h3>Some Stats (accurate as of 16 Nov 2019):</h3>
+            <p>
+              Total hours: 2859.8<br>
+              Total landings: 1121
+            </p>
           </div>
         </div>
       </div>
@@ -34,14 +38,21 @@
           <div class="column">
             <script type="text/javascript">
               document.addEventListener('DOMContentLoaded', function (event) {
-                new TypeIt('.engineer h2', {
-                  speed: 120,
+                new TypeIt('.engineer h2 span#type', {
+                  speed: 70,
                   breakLines: false,
-                  waitUntilVisible: true
+                  waitUntilVisible: true,
+                  loop: true,
+                  lifeLike: true,
+                  loopDelay: [500, 4000],
+                  nextStringDelay: [4000, 500],
+                  startDelay:2000,
+                  strings:[
+                  ]
                 }).go();
               })
             </script>
-            <h2>> I am a <b>Computer Engineer</b></h2>
+            <h2>><span id="type">I am a <b>Computer Engineer</b></span></h2>
             <p>My day-to-day programming consists of entering a route into an A320 FMGC.</p>
             <p>I also know the imporance of turning stuff off and on again when it doesnt work.
               <b>#A320resets</b></p>

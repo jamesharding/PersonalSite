@@ -10,6 +10,7 @@ body {
 h1.title {
   margin: 15px;
   font-size: 2em;
+  text-decoration: none;
 }
 h1.title span.title_lt {
   color: #2A558C;
@@ -34,7 +35,7 @@ b {
 }
 a {
   color: inherit;
-  text-decoration: underline;
+  text-decoration: none;
 }
 header {
   background-color: #ecf0f1;
@@ -45,15 +46,14 @@ header {
   width: 100%;
   height: 65px;
   z-index: 3;
-  transition: transform 0.25s ease-in-out;
+  transition: transform 0.55s ease-in-out;
 }
 header.headroom--unpinned {
   /* display: none; */
-  transform: translateY(-65px);
+  transform: translateY(-100px);
 }
 header.headroom--pinned {
   /* display: block; */
-  transform: translateY(0);
 }
 header nav {
   position: absolute;
@@ -73,7 +73,6 @@ header nav ul li {
 }
 header nav ul li.active,
 header nav ul li:hover {
-  text-decoration: underline #2A558C;
   color: #2A558C;
 }
 header nav ul li a {
@@ -117,6 +116,13 @@ div.contentblock.engineer {
   background-color: #000000;
   font-family: 'IBM Plex Mono', monospace;
   text-shadow: 0px 0px 4px #41FF00;
+}
+div.contentblock.posts {
+  background: #ecf0f1;
+  color: #111111;
+}
+div.contentblock.posts a {
+  text-decoration: underline;
 }
 div.contentblock.post .container {
   background-color: #ecf0f1;
@@ -200,6 +206,14 @@ div.contentblock div.contentblock_vcentre {
 .post pre {
   white-space: pre-wrap;
   overflow: scroll;
+}
+.post code {
+  background-color: #ddd;
+  padding: 5px;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: #ccc;
+  border-width: 1px;
 }
 .post a {
   color: #111111;

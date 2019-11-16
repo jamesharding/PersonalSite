@@ -1,13 +1,14 @@
 window.onload = function () {
   new fullpage('#fullpage', {
     //options here
-    autoScrolling:false,
+    autoScrolling:true,
     scrollHorizontally: true,
     licenseKey: 'asd',
     navigation: true,
     navigationPosition: 'right',
     anchors: ['intro', 'pilot', 'engineer', 'posts'],
     menu: '#fp-menu',
+    fixedElements: '#header',
     verticalCentered: false,
   });
   
@@ -16,7 +17,10 @@ window.onload = function () {
   // grab an element
   var myElement = document.querySelector("header#header");
   // construct an instance of Headroom, passing the element
-  var headroom = new Headroom(myElement);
+  var options = {
+    
+  }
+  headroom = new Headroom(myElement, options);
   // initialise
   headroom.init();
 }
