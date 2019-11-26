@@ -103,12 +103,14 @@ header nav ul li a {
 }
 @media (max-width: 1000px) {
   header nav ul li a {
-    font-size: 1em;
+    font-size: 0.8em;
+    padding: 0 6px;
   }
 }
 @media (max-width: 550px) {
   header nav ul li a {
     font-size: 0.8em;
+    padding: 0 4px;
   }
 }
 div.contentblock p {
