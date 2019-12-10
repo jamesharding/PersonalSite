@@ -143,16 +143,12 @@ div.contentblock{
         width: 100%;
         height: 100%;
         background-color: black;
-        opacity: 0.85;
-      }
-
-      @media (max-width: 550px) {
-        background: black;
-        opacity: 0.1;
+        opacity: 0.75;
       }
 
       video{
         object-fit: cover;
+        object-position: 50% 50%;
         @media (min-aspect-ratio: 16/9) {
           width:100%;
           height: auto;
@@ -160,9 +156,6 @@ div.contentblock{
         @media (max-aspect-ratio: 16/9) {
           width:auto;
           height: 100%;
-        }
-        @media (max-width: 550px) {
-          display: none;
         }
       }
     }

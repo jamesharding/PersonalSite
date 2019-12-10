@@ -158,16 +158,11 @@ div.contentblock.pilot div#pilot_video div#pilot_video_darker {
   width: 100%;
   height: 100%;
   background-color: black;
-  opacity: 0.85;
-}
-@media (max-width: 550px) {
-  div.contentblock.pilot div#pilot_video {
-    background: black;
-    opacity: 0.1;
-  }
+  opacity: 0.75;
 }
 div.contentblock.pilot div#pilot_video video {
   object-fit: cover;
+  object-position: 50% 50%;
 }
 @media (min-aspect-ratio: 16/9) {
   div.contentblock.pilot div#pilot_video video {
@@ -179,11 +174,6 @@ div.contentblock.pilot div#pilot_video video {
   div.contentblock.pilot div#pilot_video video {
     width: auto;
     height: 100%;
-  }
-}
-@media (max-width: 550px) {
-  div.contentblock.pilot div#pilot_video video {
-    display: none;
   }
 }
 div.contentblock.engineer,
