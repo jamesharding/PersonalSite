@@ -23,7 +23,7 @@ app.config.from_object(__name__)
 def redirect_nonwww():
     """Redirect non-www requests to www."""
     urlparts = urlparse(request.url)
-    if urlparts.netloc != 'www.jamesharding.uk' or :
+    if urlparts.netloc != 'www.jamesharding.uk':
         urlparts_list = list(urlparts)
         urlparts_list[1] = 'www.jamesharding.uk'
         return redirect(urlunparse(urlparts_list), code=301)
