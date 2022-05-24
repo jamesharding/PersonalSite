@@ -11,11 +11,11 @@ DEBUG = True
 FLATPAGES_AUTO_RELOAD = DEBUG
 FLATPAGES_EXTENSION = '.md'
 FLATPAGES_ROOT = 'content'
-FLATPAGES_EXTENSION_CONFIGS = {
-    'codehilite': {
-        'linenums': 'True'
-    }
-}
+# FLATPAGES_EXTENSION_CONFIGS = {
+#     'codehilite': {
+#         'linenums': 'True'
+#     }
+# }
 POST_DIR = 'posts'
 
 app = Flask(__name__)
