@@ -34,13 +34,18 @@ h2{
   @media (max-width: 1000px) {font-size: 2em;}
 }
 h3{
-  font-size: 1.2em;
+  font-size: 2em;
+  font-weight: 300;
 }
 h4{
-  font-size: 1.1em;
+  font-size: 1.5em;
 }
 b{
   font-weight: 800;
+}
+span.dim{
+  font-weight: 400;
+  color: #888;
 }
 a{
   color: inherit;
@@ -271,9 +276,14 @@ div.contentblock{
   pre{
     white-space: pre-wrap;
     // overflow: scroll;
+
+    code{
+      padding: 0px;
+      border: none;
+    }
   }
+
   code{
-    background-color: #ddd;
     padding: 5px;
     border-style: solid;
     border-radius: 5px;

@@ -3,7 +3,7 @@ date: 2019-11-16
 description: A short tutorial explaining how to set up a static Markdown blog in Flask in just a few lines of Python.
 tags: programming
 
-For years, I used and adored Wordpress as my go-to blogging platform. It was quick to install, easy to use, and had a ton of <s>bloat</s> functionality that I simply never used. Flask has been my framework of choice when starting a new web project for a while now, and I wanted a dead-simple solution for managing my mostly static site and handling my _occasional_ writing.  I had the following requirements:
+For years, I used and adored Wordpress as my go-to blogging platform. It was quick to install, easy to use, and had a ton of <s>bloat</s> functionality that I simply never used. Flask has been my framework of choice when starting a new web project for a while now, and I wanted a dead-simple solution for managing my mostly static site and handling my _occasional_ writing.  I had the following requirements
 
 * Must build into static site
 * Posts composed in Markdown <3
@@ -14,21 +14,17 @@ Before we begin, I recommend having a quick read of the [Flask Documentation](ht
 
 ### Ingredients
 
-Let's start with our Python dependencies. We are using Flask 0.10.x and Python 2.7
+Let's start with our Python dependencies. We are using Flask 2.1 and Python 3.8
 
-	Click==7.0
-	Flask==1.1.1
-	Flask-FlatPages==0.7.1
-	Frozen-Flask==0.15
-	itsdangerous==1.1.0
-	Jinja2==2.10.3
-	Markdown==3.1.1
-	MarkupSafe==1.1.1
-	Pygments==2.4.2
-	PyYAML==5.1.2
-	Werkzeug==0.16.0
+    Click==8.1.3
+    Flask==2.1.2
+    Flask-FlatPages==0.8.1
+    Frozen-Flask==0.18
+    Markdown==3.3.7
+    Pygments==2.12.0
+    PyYAML==6.0
 	
-I will assume that you know a little about [venv](http://iamzed.com/2009/05/07/a-primer-on-virtualenv/). If not, you seriously should be using it for all of your Python projects. Drop the above list into a file named requirements.txt and execute `pip install -r requirements.txt` from your shell. You are now ready to start building your blog.
+I will assume that you know a little about [venv](http://iamzed.com/2009/05/07/a-primer-on-virtualenv/). If not, you should probably be using it for all of your Python projects. Drop the above list into a file named requirements.txt and execute `pip install -r requirements.txt` from your shell. You are now ready to start building your blog.
 
 ### Folder Structure
 
@@ -119,7 +115,7 @@ Oh yeah, this is the easy part. If you are on Mac, I would recommend [Mou](http:
 	title: Should it be YYYY-MM-DD or YYYY-DD-MM? My Thoughts
 	date: 2013-08-27
 	
-	American-style dates, I know, I know. Here you can write markdown code, including *italics* and **bold**
+	American-style dates. I know, I know.
 	
 	You can have:
 	* Lists
