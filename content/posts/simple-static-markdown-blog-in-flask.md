@@ -16,7 +16,6 @@ Before we begin, I recommend having a quick read of the [Flask Documentation](ht
 
 Let's start with our Python dependencies. We are using Flask 2.1 and Python 3.8
 
-    Click==8.1.3
     Flask==2.1.2
     Flask-FlatPages==0.8.1
     Frozen-Flask==0.18
