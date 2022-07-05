@@ -4,3 +4,4 @@ Frozen-Flask==0.18
 Markdown==3.3.7
 Pygments==2.12.0
 PyYAML==6.0
+gunicorn==20.1.0
