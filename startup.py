@@ -7,7 +7,7 @@ from flask_frozen import Freezer
 from urllib.parse import urlparse, urlunparse
 
 BASE_URL = 'https://www.jamesharding.uk'
-DEBUG = True
+# DEBUG = True
 FLATPAGES_AUTO_RELOAD = DEBUG
 FLATPAGES_EXTENSION = '.md'
 FLATPAGES_ROOT = 'content'
