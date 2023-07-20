@@ -2,6 +2,6 @@ Flask==2.1.2
 Flask-FlatPages==0.8.1
 Frozen-Flask==0.18
 Markdown==3.3.7
-Pygments==2.12.0
+Pygments==2.15.0
 PyYAML==6.0
 gunicorn==20.1.0
