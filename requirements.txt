@@ -1,4 +1,4 @@
-Flask==2.1.2
+Flask==2.2.5
 Flask-FlatPages==0.8.1
 Frozen-Flask==0.18
 Markdown==3.3.7
